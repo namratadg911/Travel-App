@@ -1,2 +1,4 @@
 web-app/node_modules/
 web-app/package-lock.json
+restful-api/node_modules/
+restful-api/package-lock.json
