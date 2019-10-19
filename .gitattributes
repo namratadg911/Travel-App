@@ -1,2 +1,2 @@
-web-app/public/css/
-web-app/public/img/
+* linguist-vendored
+*.js linguist-vendored=false
