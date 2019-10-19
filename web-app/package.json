@@ -1,0 +1,19 @@
+{
+  "name": "travel-web-app",
+  "version": "1.0.0",
+  "description": "This is a travel app that allows users to search and plan holiday trips to domestic and international locations.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Travel",
+    "app",
+    "Hotels",
+    "holiday",
+    "desitnations"
+  ],
+  "author": "Hitesh Shetty, Namrata Gavhane, Aishwariya Rajendraprasad, Sri Konda",
+  "license": "ISC"
+}
