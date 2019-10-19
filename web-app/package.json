@@ -15,5 +15,8 @@
     "desitnations"
   ],
   "author": "Hitesh Shetty, Namrata Gavhane, Aishwariya Rajendraprasad, Sri Konda",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
