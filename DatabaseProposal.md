@@ -41,6 +41,8 @@ This subdocument is used to describe the user's profile.
 }
 ```
 
+
+
 | Name | Type | Description |
 |------|------|-------------|
 | name | string | The user's name. | 
@@ -55,7 +57,7 @@ The location collection will store all the locations that will be available for 
 {
     "_id":"7b7997a2-c0d2-4f8c-b27a-6a1d4b5b6310",
     "name":"Mini Kerala",
-    "images":"https://www.planmytrip.com/images/cmsuploads/compressed/8517681001_13f2b8748a_b_20170810164922.jpg"
+    "images":"https://www.planmytrip.com/8517681001_13f2b8748a_b_20170810164922.jpg"
 }
 ```
 
@@ -81,9 +83,10 @@ The Package collection will store all details about different kinds of packages 
         "itinerary_id2",
         "itinerary_id3"
     ]
-    "image":"https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj5xpq4iLjlAhWxnuAKHcC5DW8QjRx6BAgBEAQ&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fkerala%2F&psig=AOvVaw0l5Q4fQDj7VPv0OOP3RDeS&ust=1572115412493483"
+    "image":"https://www.planmytrip.com?id=1572115412493483"
 }
 ```
+
 
 | Name | Type | Description |
 |------|------|-------------|
@@ -102,7 +105,7 @@ The hotel colllection will have all the Hotels available for booking. It will st
 {
     "_id":"8b5547a2-c0d7-4k8c-b20a-6a1h4b5b7810",
     "name":"Hotel Malabar",
-    "images":"https://q-planmytrip.bstatic.com/images/hotel/max1024x768/229/22922432.jpg",
+    "images":"https://q-planmytrip.bstatic.com/images/22922432.jpg",
     "rooms":["deluxe","semi-deluxe","super-deluxe"],
     "ratings":"5.0"
 }
@@ -115,6 +118,7 @@ The hotel colllection will have all the Hotels available for booking. It will st
 | images | string | Images of the location |
 | rooms | array | Array of type of rooms available |
 | ratings | string | Ratings given to the Hotel |
+
 
 ## Attraction
 
