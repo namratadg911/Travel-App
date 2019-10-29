@@ -151,7 +151,7 @@ The Itinerary collection will store the Itinerary details such as day, the list 
         "name":"Day 1",
         "attractions":["5a5c4461-cdc9-4144-84f9-gcb278c5c125","5a5c4461-cdc9-4144-84f9-dcb278c5c125","5a5c4461-grc9-4144-84f9-gcb278c5c125"],
         "hotel":"c5d0fd67-7977-4fc5-9088-33d0347c932b"
-},
+}
 ```
 
 | Name | Type | Description |
