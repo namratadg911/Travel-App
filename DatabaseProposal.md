@@ -196,7 +196,7 @@ The Booking collection will store the booking confirmation details when user mak
         "booking_date":"Fri Oct 24 2019 22:35:22 GMT-0400",
         "cancel_date":"Fri Oct 25 2019 22:35:22 GMT-0400",
         "status":"booked"
-},
+}
 ```
 
 | Name | Type | Description |
