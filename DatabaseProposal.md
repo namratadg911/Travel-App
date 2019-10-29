@@ -187,14 +187,14 @@ The Booking collection will store the booking confirmation details when user mak
 ```
 {
     	"_id":"5a5c4461-cdc9-4144-84f9-gcb278c5c125",
-		"user_id":"5a5c4461-cdc9-4144-84f9-usr278c5c125",
+        "user_id":"5a5c4461-cdc9-4144-84f9-usr278c5c125",
         "package_id":"5a5c4461-cdc9-4144-84f9-pkg278c5c125",
-		"payment_id":"5a5c4461-cdc9-4144-84f9-pay278c5c125",
+        "payment_id":"5a5c4461-cdc9-4144-84f9-pay278c5c125",
         "total_price":5000,
-		"currency":"USD",
-		"total_people":4,
-		"booking_date":"Fri Oct 24 2019 22:35:22 GMT-0400",
-		"cancel_date":"Fri Oct 25 2019 22:35:22 GMT-0400",
+        "currency":"USD",
+        "total_people":4,
+        "booking_date":"Fri Oct 24 2019 22:35:22 GMT-0400",
+        "cancel_date":"Fri Oct 25 2019 22:35:22 GMT-0400",
         "status":"booked"
 },
 ```
