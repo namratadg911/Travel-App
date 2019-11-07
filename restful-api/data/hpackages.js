@@ -1,4 +1,4 @@
-const mongoCollections = require('../mongoCollections');
+const mongoCollections = require('../collections');
 const hpackage = mongoCollections.hpackages;
 const {ObjectId} = require("mongodb");
 
@@ -12,19 +12,19 @@ module.exports = {
         else
         {
             const hpackageCollection = await hpackage();
-            const hpackage = await hpackageCollection.findOne({_id:ObjectId(id)});
-            if(hpackage == null)
+            const hpackage1 = await hpackageCollection.findOne({_id:ObjectId(id)});
+            if(hpackage1 == null)
             {
                 return "No hpackage with the given ID";
             }
             else
             {
-                return hpackage;
+                return hpackage1;
             }
         }
     },
 
-    async createPayment(name, price, image)
+    async create(name, price, image)
     {
         if(!price || !name)
         {
@@ -45,7 +45,7 @@ module.exports = {
                 price: price,
                 location_id: "",
                 list: [],
-                image: []
+                image: image
             };
             const hpackageCollection = await hpackage();
             const insertInfo = await hpackageCollection.insertOne(newhpackage);
@@ -60,5 +60,49 @@ module.exports = {
                 return hpackage;
             }
         }
+    },
+    async updatePrice(id,price)
+    {
+        if(!id || !price)
+        {
+            throw "Both name and price should be given";
+        }
+        else
+        {
+            let updateInfo = {
+                price: price
+            };
+            const hpackageCollection = await hpackage();
+            const update = await hpackageCollection.updateOne({_id: ObjectId(id)}, {$set: updateInfo});
+            if (update.modifiedCount === 0) 
+            {
+                throw 'could not update successfully';
+            }
+            else
+            {
+                const hpackage = await this.gethpackageById(ObjectId(id));
+                return hpackage;
+            }
+        }
+    },
+    async removeHpackage(id)
+    {
+        if(!id)
+        {
+            throw "ID must be provided to search"
+        }
+        else
+        {
+            const hpackageCollection = await hpackage();
+            const remove = await hpackageCollection.removeOne({_id: ObjectId(id)});
+            if(remove.deletedCount == null)
+            {
+                throw "couldn't remove the package";
+            }
+            else
+            {
+                return remove;
+            }
+        }
     }
-}
+};

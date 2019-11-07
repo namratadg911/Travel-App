@@ -21,5 +21,6 @@ module.exports = {
     hpackages: getCollectionFn("hpackages"),
 	hotels: getCollectionFn("hotels"),
 	locations: getCollectionFn("locations"),
-	itinerary: getCollectionFn("itinerary")
+    itinerary: getCollectionFn("itinerary"),
+    payment: getCollectionFn("payment")
 };
