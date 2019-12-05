@@ -1,4 +1,4 @@
-const mongoCollections = require('../collections');
+const mongoCollections = require('./collections');
 const hpackage = mongoCollections.hpackages;
 const {ObjectId} = require("mongodb");
 
