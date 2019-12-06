@@ -104,7 +104,21 @@ const constructorMethod = app => {
             pageTitle: "Search",
         });
     });
-
+    app.get("/user-profile", async (req, res) => {
+        res.status(200).render("user/profile", {
+            pageTitle: "User Profile",
+        });
+    });
+    app.get("/checkout", async (req, res) => {
+        res.status(200).render("booking/checkout", {
+            pageTitle: "Checkout",
+        });
+    });
+    app.get("/contact", async (req, res) => {
+        res.status(200).render("contact/details", {
+            pageTitle: "Checkout",
+        });
+    });
     app.get("/package-details/:id", async (req, res) => {
         const packageId = req.params.id;
         console.log("package id:" + packageId);
