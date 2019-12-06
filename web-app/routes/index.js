@@ -99,7 +99,7 @@ const constructorMethod = app => {
             pageTitle: "Home | Plan My Trip",
         });
     });
-    app.get("/search", async (req, res) => {
+    app.post("/search", async (req, res) => {
         res.status(200).render("package/listing", {
             pageTitle: "Search",
         });
