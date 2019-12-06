@@ -105,6 +105,22 @@ const constructorMethod = app => {
         });
     });
 
+    app.get("/package-details/:id", async (req, res) => {
+        const packageId = req.params.id;
+        console.log("package id:" + packageId);
+        //TODO redirect to 404 if packageId not found in database
+
+        const packageDetails = {
+            id: packageId,
+            name: "Dummy Package name",
+            description: "Dummy Package Description"
+        }
+        res.status(200).render("package/details", {
+            pageTitle: "Package Detail|" + packageId,
+            package: packageDetails
+        });
+    });
+
     app.get("*", async (req, res) => {
         res.status(404).render("error_view/generic_error", {
             pageTitle: "Page Not found!!",
