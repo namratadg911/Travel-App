@@ -1,8 +1,10 @@
 const constructorMethod = app => {
 
     app.get("/", async (req, res) => {
+        const data = require("../../restful-api/data/hpackages");
+        const dd = await data.getall();
         res.status(200).render("home/index", {
-            pageTitle: "Home Page"
+            pageTitle: "Home Page", name: dd[0]['name'], url: dd[0]['image']
         });
         /*
         if (req.session !== undefined && req.session.username) {

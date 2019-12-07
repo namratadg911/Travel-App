@@ -23,7 +23,12 @@ module.exports = {
             }
         }
     },
-
+   async getall()
+   {
+    const hpackageCollection = await hpackage();
+    const packages = await hpackageCollection.find({}).toArray();
+    return packages;
+   },
     async create(name, price, image)
     {
         if(!price || !name)
