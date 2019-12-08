@@ -4,12 +4,12 @@ const constructorMethod = app => {
     app.get("/", async (req, res) => {
         const data = require("../../restful-api/data/hpackages");
         //Harsha: Use get first 6 pacakges to list the top packages
-        const featuredPackageList = await data.getall();
+        const featuredLocations = await data.getall();
         //split package to multiple row based on column size
-        const featuredLocations = 3
+        const featuredColumnSize = 3
         res.status(200).render("home/index", {
             pageTitle: "Home Page",
-            featuredLocations: util.convertListToRows(featuredPackageList, featuredLocations)
+            featuredLocations: util.convertListToRows(featuredLocations, featuredColumnSize)
 
 
         });
