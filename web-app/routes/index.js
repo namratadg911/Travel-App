@@ -1,10 +1,17 @@
+const util = require("./utils/common-utility");
 const constructorMethod = app => {
 
     app.get("/", async (req, res) => {
         const data = require("../../restful-api/data/hpackages");
-        const dd = await data.getall();
+        //Harsha: Use get first 6 pacakges to list the top packages
+        const featuredPackageList = await data.getall();
+        //split package to multiple row based on column size
+        const featuredLocations = 3
         res.status(200).render("home/index", {
-            pageTitle: "Home Page", name: dd[0]['name'], url: dd[0]['image']
+            pageTitle: "Home Page",
+            featuredLocations: util.convertListToRows(featuredPackageList, featuredLocations)
+
+
         });
         /*
         if (req.session !== undefined && req.session.username) {
