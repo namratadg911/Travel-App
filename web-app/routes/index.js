@@ -123,6 +123,11 @@ const constructorMethod = app => {
             pageTitle: "Checkout",
         });
     });
+    app.get("/confirmation", async (req, res) => {
+        res.status(200).render("booking/confirmation", {
+            pageTitle: "Booking Confirmation",
+        });
+    });
     app.get("/contact", async (req, res) => {
         res.status(200).render("contact/details", {
             pageTitle: "Checkout",
