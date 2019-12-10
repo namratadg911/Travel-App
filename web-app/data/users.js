@@ -1,28 +1,95 @@
-module.exports = [{
-        _id: 0,
-        username: "masterdetective123",
-        hashedPassword: "$2a$16$7JKSiEmoP3GNDSalogqgPu0sUbwder7CAN/5wnvCWe6xCKAKwlTD.",
-        firstName: "Sherlock",
-        lastName: "Holmes",
-        profession: "Detective",
-        bio: "Sherlock Holmes (/ˈʃɜːrlɒk ˈhoʊmz/) is a fictional private detective created by British author Sir Arthur Conan Doyle. Known as a \"consulting detective \" in the stories, Holmes is known for a proficiency with observation, forensic science, and logical reasoning that borders on the fantastic, which he employs when investigating cases for a wide variety of clients, including Scotland Yard."
-    }, // etc, dont forget the other data
-    {
-        _id: 1,
-        username: "lemon",
-        hashedPassword: "$2a$16$SsR2TGPD24nfBpyRlBzINeGU61AH0Yo/CbgfOlU1ajpjnPuiQaiDm",
-        firstName: "Elizabeth",
-        lastName: "Lemon",
-        profession: "Writer",
-        bio: 'Elizabeth Miervaldis "Liz" Lemon is the main character of the American television series 30 Rock. She created and writes for the fictional comedy-sketch show The Girlie Show or TGS with Tracy Jordan.'
-    }, // etc, dont forget the other data
-    {
-        _id: 2,
-        username: "theboywholived",
-        hashedPassword: "$2a$16$4o0WWtrq.ZefEmEbijNCGukCezqWTqz1VWlPm/xnaLM8d3WlS5pnK",
-        firstName: "Harry",
-        lastName: "Potter",
-        profession: "Student",
-        bio: "Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the life of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry . The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and Muggles."
-    }
-];
+
+const mongoCollections = require("./collections");
+const user = mongoCollections.user;
+const bcrypt = require("bcryptjs")
+const saltRounds = 16;
+const ObjectId = require('mongodb').ObjectID;   //https://stackoverflow.com/questions/7825700/convert-string-to-objectid-in-mongodb
+
+module.exports = {
+
+    async get(id){
+        if(!id) throw "Please provide id";
+        
+        const userCollection = await user();
+        
+        const user2 = await userCollection.findOne({ _id: ObjectId(id) });
+        if (user2 === null) throw "No person with that id";
+
+        return user2;
+  },
+
+    async create(email, username, password, firstname, lastname, address, city, state, phonenumber){
+        if(!email) throw "Email of the user should be provided";
+        if(!username) throw "username should be provided";
+        if(!firstname) throw "firstname should be provided";
+        if(!lastname) throw "lastname should be provided";
+        if(!address) throw "address should be provided";
+        if(!city) throw "city should be provided";
+        if(!state) throw "state should be provided";
+        if(!phonenumber) throw "phonenumber should be provided";
+        if(!password) throw "password should be provided";
+        
+        const userCollection = await user();
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+        let newUser = {
+            _id: id,
+            email: email,
+            firstname: firstname,
+            lastname: lastname,
+            username: username,
+            hashedPassword: hashedPassword,
+            address: address,
+            city: city,
+            state: state,
+            phonenumber: phonenumber
+
+        }
+        const insertdata = await createCollection.insertOne(newUser);
+        // if(insertdata.insertedCount == 0) throw "Could not add animal ";
+
+        const newId = insertdata.insertedId;
+
+        const user1 = await this.get(newId);
+        return user1;
+  },
+
+    async getAll(){
+        
+        const userCollection = await user();
+
+        const user3 = await userCollection.find({}).toArray();
+
+        return user3;
+        },
+    
+    // async remove(id){
+    //     if(!id) throw "Provide an id";
+
+    //     const userCollection = await user();
+    //     const removedata = await animalCollection.findOne({ _id: ObjectId(id) });
+    //     const remdata = await animalCollection.removeOne(removedata);
+
+    //     if (remdata.deletedCount === 0)  throw `Could not delete dog with id of ${id}`;
+        
+    //     else
+    //         return removedata;
+    // },
+    // async rename(id, newName) {
+    //     if (!id) throw "You must provide a post id";
+    //     if (!newName) throw "You must provide a name";
+    //     if(typeof newName !== 'string') throw "name should be string";
+            
+    //     const animalCollection = await animals();
+        
+    //     //https://stackoverflow.com/questions/38883285/error-the-update-operation-document-must-contain-atomic-operators-when-running/38883596
+    //     const updatedata = await animalCollection.updateOne({ _id: ObjectId(id)}, {$set:{name: newName}});
+    //     if (updatedata.modifiedCount === 0) 
+    //         throw "could not update animal successfully";
+    //     return await this.get(id); 
+      
+    // },
+};
+
+
+    

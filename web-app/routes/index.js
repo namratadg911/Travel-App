@@ -2,7 +2,7 @@ const util = require("./utils/common-utility");
 const constructorMethod = app => {
 
     app.get("/", async (req, res) => {
-        const data = require("../../restful-api/data/hpackages");
+        const data = require("../data/hpackages");
         //Harsha: Use get first 6 pacakges to list the top packages
         const featuredLocations = await data.getall();
         //split package to multiple row based on column size
