@@ -9,15 +9,15 @@ async function create()
 {
    const one = await hpackage1.create("kerala", "1500", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
    console.log(one);
-   const two = await hpackage1.create("Himalayas", "2000", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const two = await hpackage1.create("Himalayas", "2000", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
    console.log(two);
-   const three = await hpackage1.create("TamilNadu", "18000", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const three = await hpackage1.create("TamilNadu", "18000", "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
    console.log(three);
-   const four = await hpackage1.create("AndhraPradesh", "1700", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const four = await hpackage1.create("AndhraPradesh", "1700", "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
    console.log(four);
-   const five = await hpackage1.create("Punjab", "1700", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const five = await hpackage1.create("Punjab", "1700", "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
    console.log(five);
-   const six = await hpackage1.create("WestBengal", "1700", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const six = await hpackage1.create("WestBengal", "1700", "https://static.toiimg.com/photo/62569054/.jpg");
    console.log(six);
 
    const saltRounds = 5;
