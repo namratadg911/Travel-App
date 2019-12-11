@@ -3,33 +3,35 @@
     <div class="row">
         <h1>Payment</h1>
         <div class="container">
+          <form id="checkout-form" method="POST" action="/confirmation">
             <div class="row">
                 <h3>Card details in this row</h3>
                 <p>Build the Payment section. </p>
                 <div class="form-group col-md-6">
-                  <label for="name">Name on card</label>
-                  <input type="text" class="form-control" id="name" placeholder="NAME ON CARD" >
+                  <label for="name">Name on Card</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="NAME ON CARD" >
                 </div>
                 <div class="form-group col-md-6">
                   <label for="cardnumber">Card Number</label>
-                  <input type="text" class="form-control" id="cardnumber" placeholder="CARD NUMBER" >
+                  <input type="text" class="form-control" id="cardnumber" name="cardnumber" placeholder="CARD NUMBER" >
                 </div>
                 <div class="form-group col-md-6">
                   <label for="expirymonth">Expiry Month</label>
-                  <input type="text" class="form-control" id="expirymonth" placeholder="EXPIRY MONTH (MM)" >
+                  <input type="text" class="form-control" id="expirymonth" name="expirymonth" placeholder="EXPIRY MONTH (MM)" >
                 </div>
                 <div class="form-group col-md-6">
                   <label for="expiryyear">Expiry Year</label>
-                  <input type="text" class="form-control" id="expiryyear" placeholder="EXPIRY YEAR (YYYY)" >
+                  <input type="text" class="form-control" id="expiryyear" name="expiryyear" placeholder="EXPIRY YEAR (YYYY)" >
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="cvv">cvv</label>
+                  <label for="cvv">CVV</label>
                   <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV">
                 </div>
             </div>
             <div class="row">
-                <button type="button" class="btn btn-primary">Make Payment</button>
+                <button type="submit" class="btn btn-primary">Make Payment</button>
             </div>
+            </form>
         </div>
     </div>
 </div>

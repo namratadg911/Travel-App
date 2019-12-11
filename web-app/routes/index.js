@@ -1,6 +1,11 @@
 const util = require("./utils/common-utility");
 const constructorMethod = app => {
 
+    var bodyParser = require("body-parser");
+    app.use(bodyParser.urlencoded({ extended: false }));
+    const bcrypt = require("bcryptjs");
+
+
     app.get("/", async (req, res) => {
         const data = require("../data/hpackages");
         //Harsha: Use get first 6 pacakges to list the top packages
@@ -123,7 +128,29 @@ const constructorMethod = app => {
             pageTitle: "Checkout",
         });
     });
-    app.get("/confirmation", async (req, res) => {
+    app.post("/confirmation", async (req, res) => {
+        const data = require("../data/payment");
+        const paymentData = await data.getall(); 
+        var c = 0;
+        for(var i=0; i<paymentData.length; i++)
+        {
+            if(req.body.name == paymentData[i]['name'] && req.body.expirymonth == paymentData[i]['month'] && req.body.expiryyear==paymentData[i]['year'])
+            {
+                var cardnumber_check = false;
+                var cvv_check = false;
+                cardnumber_check =  bcrypt.compare(req.body.cardnumber , paymentData[i]['cardnumber']);
+                cvv_check =  bcrypt.compare(req.body.cvv , paymentData[i]['cvv']);
+                if(cardnumber_check && cvv_check )
+                {
+                    console.log("success!");
+                    c++;
+                }
+            }
+        }
+        if(c==0)
+        {
+            console.log("fail");
+        }
         res.status(200).render("booking/confirmation", {
             pageTitle: "Booking Confirmation",
         });

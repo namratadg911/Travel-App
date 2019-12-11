@@ -24,21 +24,31 @@ module.exports = {
         }
     },
 
-    async createPayment(type, name)
+    async getall()
     {
-        if(!type || !name)
+     const paymentCollection = await payment();
+     const payment1 = await paymentCollection.find({}).toArray();
+     return payment1;
+    },
+
+    async createPayment(name, cardnumber, mm, yy, cvv)
+    {
+        if(!name)
         {
             throw "Both Type and Name must be provided";
         }
-        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(type) != "string" || typeof(type) == "undefined" )
+        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(cardnumber) != "string" || typeof(cardnumber) == "undefined" || typeof(mm) != "string" || typeof(mm) == "undefined" || typeof(yy) != "string" || typeof(yy) == "undefined" || typeof(cvv) != "string" || typeof(cvv) == "undefined" )
         {
             throw "Both Type and Name should be of type string";
         }
         else
         {
             let newPayment = {
-                type: type,
-                name: name
+                name: name,
+                cardnumber: cardnumber,
+                month: mm,
+                year: yy,
+                cvv: cvv
             };
             const paymentCollection = await payment();
             const insertInfo = await paymentCollection.insertOne(newPayment);
