@@ -19,6 +19,7 @@ module.exports = {
   },
 
     async create(email, username, password, firstname, lastname, address, city, state, phonenumber){
+        
         if(!email) throw "Email of the user should be provided";
         if(!username) throw "username should be provided";
         if(!firstname) throw "firstname should be provided";
@@ -45,7 +46,7 @@ module.exports = {
             phonenumber: phonenumber
 
         }
-        const insertdata = await createCollection.insertOne(newUser);
+        const insertdata = await userCollection.insertOne(newUser);
         // if(insertdata.insertedCount == 0) throw "Could not add animal ";
 
         const newId = insertdata.insertedId;
