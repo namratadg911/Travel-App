@@ -19,13 +19,16 @@ async function create()
 //    console.log(five);
 //    const six = await hpackage1.create("WestBengal", "1700", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
 //    console.log(six);
+
    const saltRounds = 5;
+
    const cardnumber1 = "4712960125514588";
    const cvv1 = "122";
    const hash_cardnumber1 = await bcrypt.hash(cardnumber1, saltRounds);
    const hash_cvv1 = await bcrypt.hash(cvv1, saltRounds);
    const seven = await payments.createPayment("harsha",hash_cardnumber1,"05","2026",hash_cvv1 );
    console.log(seven);
+
    const cardnumber2 = "4715554865982255";
    const cvv2 = "644";
    const hash_cardnumber2 = await bcrypt.hash(cardnumber2, saltRounds);
