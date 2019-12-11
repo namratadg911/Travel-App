@@ -33,6 +33,29 @@ async function create()
    const eight = await payments.createPayment("chaitanya",hash_cardnumber2,"07","2029",hash_cvv2 );
    console.log(eight);
 
+
+/*
+payment details:
+
+Details 1:
+Name: harsha
+CardNumber: 4712960125514588
+Month: 05
+Year: 2026
+CVV:  122
+
+Details 2:
+Name:  chaitanya
+CardNumber: 4715554865982255
+Month: 07
+Year: 2029
+CVV:  644
+*/
+
+
+
+
+
    const db = await connection();
     await db.serverConfig.close();
     
