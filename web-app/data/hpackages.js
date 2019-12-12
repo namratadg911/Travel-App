@@ -94,7 +94,7 @@ module.exports = {
     {
         if(!id)
         {
-            throw "ID must be provided to search"
+            throw "ID must be provided to search";
         }
         else
         {

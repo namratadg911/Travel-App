@@ -22,5 +22,6 @@ module.exports = {
 	hotels: getCollectionFn("hotels"),
 	locations: getCollectionFn("locations"),
     itinerary: getCollectionFn("itinerary"),
-    payment: getCollectionFn("payment")
+    payment: getCollectionFn("payment"),
+    attraction: getCollectionFn("attraction")
 };
