@@ -72,44 +72,89 @@ async function create()
 //    console.log(kten);
 
 //Himalayas
-   const hone = await attraction1.create(11, "Temple", 2, "https://handluggageonly.co.uk/wp-content/uploads/2017/09/IMG_4482.jpg");
-   console.log(hone);
-   const htwo = await attraction1.create(12, "Cliffside Caves", 4, "https://img.traveltriangle.com/blog/wp-content/uploads/2018/09/Paro-Taktsang-Cover.jpg");
-   console.log(htwo);
-   const hthree = await attraction1.create(13, "Pashupatinath Temple", 5, "http://www.helpmeagain.com/wp-content/uploads/2017/04/MAN_7441.jpg");
-   console.log(hthree);
-   const hfour = await attraction1.create(14, "Buddhist Temple", 2, "https://i.pinimg.com/originals/5c/71/73/5c7173f85a750b51e1c0161fa0a41bbb.jpg");
-   console.log(hfour);
-   const hfive = await attraction1.create(15, "Kathmandu Durbar Square ", 3, "https://www.betterplacestravel.com/wp-content/uploads/2017/03/Nepal-Kathmandu-Durbar-square-2w.jpg");
-   console.log(hfive);
-   const hsix = await attraction1.create(16, "Trekking", 6, "https://www.adventuregreathimalaya.com/wp-content/uploads/2016/07/manaslu12.jpg");
-   console.log(hsix);
-   const hseven = await attraction1.create(17, "Kathmandu Valley", 3, "https://cdn.britannica.com/s:700x500/48/10548-004-B1063E67/Kathmandu-Nepal-Valley-background-Bairavkund-Range.jpg");
-   console.log(hseven);
-   const height = await attraction1.create(18, "Annapurna Sanctuary", 5, "https://ssl.c.photoshelter.com/img-get2/I0000vnvCm4kPHA4/fit=1000x750/07NEP-2719.jpg");
-   console.log(height);
-   const hnine = await attraction1.create(19, "Mount Kailash", 6, "https://www.tibettravel.org/blog/wp-content/uploads/2017/01/mount-kailash-3.jpg");
-   console.log(hnine);
-   const hten = await attraction1.create(20, "Rohtang La ", 4, "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/10/Rohtang-pass-2.jpg");
-   console.log(hten);
+   // const hone = await attraction1.create(11, "Temple", 2, "https://handluggageonly.co.uk/wp-content/uploads/2017/09/IMG_4482.jpg");
+   // console.log(hone);
+   // const htwo = await attraction1.create(12, "Cliffside Caves", 4, "https://img.traveltriangle.com/blog/wp-content/uploads/2018/09/Paro-Taktsang-Cover.jpg");
+   // console.log(htwo);
+   // const hthree = await attraction1.create(13, "Pashupatinath Temple", 5, "http://www.helpmeagain.com/wp-content/uploads/2017/04/MAN_7441.jpg");
+   // console.log(hthree);
+   // const hfour = await attraction1.create(14, "Buddhist Temple", 2, "https://i.pinimg.com/originals/5c/71/73/5c7173f85a750b51e1c0161fa0a41bbb.jpg");
+   // console.log(hfour);
+   // const hfive = await attraction1.create(15, "Kathmandu Durbar Square ", 3, "https://www.betterplacestravel.com/wp-content/uploads/2017/03/Nepal-Kathmandu-Durbar-square-2w.jpg");
+   // console.log(hfive);
+   // const hsix = await attraction1.create(16, "Trekking", 6, "https://www.adventuregreathimalaya.com/wp-content/uploads/2016/07/manaslu12.jpg");
+   // console.log(hsix);
+   // const hseven = await attraction1.create(17, "Kathmandu Valley", 3, "https://cdn.britannica.com/s:700x500/48/10548-004-B1063E67/Kathmandu-Nepal-Valley-background-Bairavkund-Range.jpg");
+   // console.log(hseven);
+   // const height = await attraction1.create(18, "Annapurna Sanctuary", 5, "https://ssl.c.photoshelter.com/img-get2/I0000vnvCm4kPHA4/fit=1000x750/07NEP-2719.jpg");
+   // console.log(height);
+   // const hnine = await attraction1.create(19, "Mount Kailash", 6, "https://www.tibettravel.org/blog/wp-content/uploads/2017/01/mount-kailash-3.jpg");
+   // console.log(hnine);
+   // const hten = await attraction1.create(20, "Rohtang La ", 4, "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/10/Rohtang-pass-2.jpg");
+   // console.log(hten);
+
+//Tamil Nadu
+   const tone = await attraction1.create(21, "Meenakshi Temple", 2, "https://lh4.googleusercontent.com/proxy/vfwneme5ew6St9-O0NceqKmO_9zucfVxj2ZwX6cH6cbZck8Eg1Z5KMNoZZfmTBddCV0HzHFesNFc1n_Aknlr1Pg3StiZcqb0OHkqo7uLKt-GN8PTQjwyrMpg3dq0DdJbCUgrF0sFnAr5rfEnwfN37N8SAOA=w580-h325-n-k-no");
+   console.log(tone);
+   const ttwo = await attraction1.create(22, "Shore Temple", 2, "https://www.wondermondo.com/wp-content/uploads/2019/02/Chennai_Beach_temple_942115928.jpg");
+   console.log(ttwo);
+   const tthree = await attraction1.create(23, "Marina Beach", 2, "https://thelotus.in/blog/wp-content/uploads/2018/10/b1.jpg");
+   console.log(tthree);
+   const tfour = await attraction1.create(24, "Brihadeeswarar Temple", 1, "https://s3.india.com/travel/wp-content/uploads/2016/05/Brihadeeswarar1.jpg");
+   console.log(tfour);
+   const tfive = await attraction1.create(25, "Peak", 4, "http://live.staticflickr.com/5616/15349762328_196af94389_b.jpg");
+   console.log(tfive);
+   const tsix = await attraction1.create(26, "Nilgiri Mountain Railway", 2, "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-s3fkj69dr1tqpo8vn44fasres2-20190227015427.Medi.jpeg");
+   console.log(tsix);
+   const tseven = await attraction1.create(27, "Pancha Rathas", 2, "https://www.themysteriousindia.net/wp-content/uploads/Mahabalipuram-1-1-770x513.jpg");
+   console.log(tseven);
+   const teight = await attraction1.create(28, "Scholar Statue", 3, "https://www.maduraitourism.com/wp-content/uploads/2014/06/spot3.jpg");
+   console.log(teight);
+   const tnine = await attraction1.create(29, "Botanical Garden", 4, "https://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-ea35v3t98mpm963jkc5son8lt7-20160530063233.Medi.jpeg");
+   console.log(tnine);
+   const tten = await attraction1.create(30, "Meditation Dome", 2, "https://cdnimd.worldarchitecture.org/extuploadc/photobysanyambahgacopy.jpg");
+   console.log(tten);
+
+//Andhra Pradesh
+
+   // const anone = await attraction1.create(31, "", 2, "");
+   // console.log(anone);
+   // const antwo = await attraction1.create(32, "", 4, "");
+   // console.log(antwo);
+   // const anthree = await attraction1.create(33, "", 5, "");
+   // console.log(anthree);
+   // const anfour = await attraction1.create(34, "", 2, "");
+   // console.log(anfour);
+   // const anfive = await attraction1.create(35, "", 3, "");
+   // console.log(anfive);
+   // const ansix = await attraction1.create(36, "", 6, "");
+   // console.log(ansix);
+   // const anseven = await attraction1.create(37, "", 3, "");
+   // console.log(anseven);
+   // const aneight = await attraction1.create(38, "", 5, "");
+   // console.log(aneight);
+   // const annine = await attraction1.create(39, "", 6, "");
+   // console.log(annine);
+   // const anten = await attraction1.create(40, "", 4, "");
+   // console.log(anten);
 
    
 
-   const saltRounds = 5;
+   // const saltRounds = 5;
 
-   const cardnumber1 = "4712960125514588";
-   const cvv1 = "122";
-   const hash_cardnumber1 = await bcrypt.hash(cardnumber1, saltRounds);
-   const hash_cvv1 = await bcrypt.hash(cvv1, saltRounds);
-   const seven = await payments.createPayment("harsha",hash_cardnumber1,"05","2026",hash_cvv1 );
-   console.log(seven);
+   // const cardnumber1 = "4712960125514588";
+   // const cvv1 = "122";
+   // const hash_cardnumber1 = await bcrypt.hash(cardnumber1, saltRounds);
+   // const hash_cvv1 = await bcrypt.hash(cvv1, saltRounds);
+   // const seven = await payments.createPayment("harsha",hash_cardnumber1,"05","2026",hash_cvv1 );
+   // console.log(seven);
 
-   const cardnumber2 = "4715554865982255";
-   const cvv2 = "644";
-   const hash_cardnumber2 = await bcrypt.hash(cardnumber2, saltRounds);
-   const hash_cvv2 = await bcrypt.hash(cvv2, saltRounds);
-   const eight = await payments.createPayment("chaitanya",hash_cardnumber2,"07","2029",hash_cvv2 );
-   console.log(eight);
+   // const cardnumber2 = "4715554865982255";
+   // const cvv2 = "644";
+   // const hash_cardnumber2 = await bcrypt.hash(cardnumber2, saltRounds);
+   // const hash_cvv2 = await bcrypt.hash(cvv2, saltRounds);
+   // const eight = await payments.createPayment("chaitanya",hash_cardnumber2,"07","2029",hash_cvv2 );
+   // console.log(eight);
 
 
 /*
