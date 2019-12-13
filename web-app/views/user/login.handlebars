@@ -9,9 +9,19 @@
         <input name="password" id="password" type="password" />
         <br>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">Log In</button>
+        <a href="profile.handlebars">Sign Up</a>
         <br>
         <p class="error">{{error}}</p>
     </form>
+
+    {{!-- <script>
+        $("#login-form").submit(function(event)){
+            event.preventDefault();
+        }
+
+        var $form = $(this),
+        url = $form.attr('action');
+    </script> --}}
 
 </main>

@@ -20,6 +20,17 @@ const constructorMethod = app => {
                 featuredColumnSize
             )
         });
+
+    // app.get("/", async (req, res) => {
+
+    //     if (req.session.user != undefined) {
+    //         res.redirect("/private");    
+    //     } else {
+            
+    //         res.render("user/login")
+            
+    //     }
+    // })
         /*
             if (req.session !== undefined && req.session.username) {
                 res.redirect("/private");
