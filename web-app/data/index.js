@@ -64,6 +64,21 @@ console.log(fourKHotel);
 const fiveKHotel = await hotels.create(5, "Hotel Beach View", "https://www.keralatourism.org/images/enchanting_kerala/large/state_tourism_award_winners_2014_1520170427151956_640_1.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(fiveKHotel);
 
+
+//Himalaya Hotels
+
+const sixKHotel = await hotels.create(6, "Hotel Yak & Yeti", "https://pix6.agoda.net/hotelImages/290/290041/290041_14030513270018558804.jpg?s=1024x768",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(sixKHotel);
+const sevenKHotel = await hotels.create( 7, "Hotel Mount Kailash",  "https://g5.globimmo.net/img.php?src=server3/a/4/1/7/c/c266722bfcdf9a9afc3d0fb690a9daa5b95768e6d2e0a8d1a3c4ae8a5cc.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(sevenKHotel);
+const eightKHotel = await hotels.create(8, "Hotel Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(eightKHotel);
+const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg)",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(nineKHotel);
+const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg)",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(tenKHotel);
+
+
 //Kerala
    const kone = await attraction1.create(1, "Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
    console.log(kone);
