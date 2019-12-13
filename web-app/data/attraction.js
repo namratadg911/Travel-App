@@ -19,7 +19,7 @@
 
 const mongoCollections = require('./collections');
 const attraction = mongoCollections.attraction;
-const {ObjectId} = require("mongodb");
+//const {ObjectId} = require("mongodb");
 
 module.exports = {
     async getattractionById(id)
@@ -31,7 +31,10 @@ module.exports = {
         else
         {
             const attractionCollection = await attraction();
-            const attraction1 = await attractionCollection.findOne({_id:ObjectId(id)});
+            
+            const attraction1 = await attractionCollection.findOne({_id: id});
+            //console.log(id,"Hello")
+            //const attraction1 = await attractionCollection.findOne({_id:ObjectId(id)});
             if(attraction1 == null)
             {
                 return "No attractions with the given ID";
@@ -48,8 +51,11 @@ module.exports = {
     const attraction2 = await attractionCollection.find({}).toArray();
     return attraction2;
    },
-    async create(name, duration, image)
+    async create(id, name, duration, image)
     {
+        if(!id){
+            throw "id should be provided";
+        }
         if(!duration || !name)
         {
             throw "Both duration and Name must be provided";
@@ -67,6 +73,7 @@ module.exports = {
         else
         {
             let newattraction = {
+                _id: id,
                 name: name,
                 duration: duration,
                 image: image
@@ -97,14 +104,18 @@ module.exports = {
                 duration: duration
             };
             const attractionCollection = await attraction();
-            const update4 = await attractionCollection.updateOne({_id: ObjectId(id)}, {$set: updateattraction});
+            const update4 = await attractionCollection.updateOne({_id: id}, {$set: updateattraction});
+
+           // const update4 = await attractionCollection.updateOne({_id: ObjectId(id)}, {$set: updateattraction});
             if (update4.modifiedCount === 0) 
             {
                 throw 'could not update successfully';
             }
             else
             {
-                const attraction5 = await this.getattractionById(ObjectId(id));
+                const attraction5 = await this.getattractionById(id);
+
+                //const attraction5 = await this.getattractionById(ObjectId(id));
                 return attraction5;
             }
         }
@@ -118,7 +129,9 @@ module.exports = {
         else
         {
             const attractionCollection = await attraction();
-            const remove6 = await attractionCollection.removeOne({_id: ObjectId(id)});
+            const remove6 = await attractionCollection.removeOne(id);
+
+            //const remove6 = await attractionCollection.removeOne({_id: ObjectId(id)});
             if(remove6.deletedCount == null)
             {
                 throw "couldn't remove the attraction";
