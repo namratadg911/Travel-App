@@ -2,6 +2,7 @@ const payments = require("./payment");
 const hpackage1 = require("./hpackages");
 const attraction1 = require("./attraction");
 const loc = require("./locations");
+const hotels = require("./hotels");
 
 const connection = require('./connection');
 const bcrypt = require("bcryptjs");
@@ -48,6 +49,20 @@ async function create()
    console.log(fiveLoc);
    const sixLoc = await loc.create( 6, "West Bengal","https://static.toiimg.com/photo/62569054/.jpg");
    console.log(sixLoc);
+
+
+//Kerala Hotels
+
+const oneKHotel = await hotels.create(1, "Thekkady house", "https://r1imghtlak.mmtcdn.com/031f11d4f48d11e7a9bf025f77df004f.jpg?&output-quality=75&downsize=520:*&crop=520:350;0,20&output-format=jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(oneKHotel);
+const twoKHotel = await hotels.create( 2, "Hotel Vembanad",  "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/96/06/960643_v1.jpeg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(twoKHotel);
+const threeKHotel = await hotels.create(3, "Kochi Palace", "https://media-cdn.tripadvisor.com/media/photo-w/0f/dc/52/10/brunton-boatyard-in-fort.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(threeKHotel);
+const fourKHotel = await hotels.create( 4, "Hotel Periyar",  "https://www.thehotelguru.com/_images/61/a5/61a5ab42af200f4a73118c590d842011/600x422.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(fourKHotel);
+const fiveKHotel = await hotels.create(5, "Hotel Beach View", "https://www.keralatourism.org/images/enchanting_kerala/large/state_tourism_award_winners_2014_1520170427151956_640_1.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(fiveKHotel);
 
 //Kerala
    const kone = await attraction1.create(1, "Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
