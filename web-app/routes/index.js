@@ -159,10 +159,12 @@ const constructorMethod = app => {
         });
     });
     app.get("/package-details/:id", async (req, res) => {
-        const packageId = req.params.id;
+        const packageId = parseInt(req.params.id);
         console.log("package id:" + packageId);
         //TODO redirect to 404 if packageId not found in database
-
+        const data = require("../data/hpackages");
+        const packageDetailsByLocationId = await data.gethpackageByLocationId(packageId);
+        console.log(packageDetailsByLocationId);
         const packageDetails = {
             id: packageId,
             name: "Dummy Package name",
