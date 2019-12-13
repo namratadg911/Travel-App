@@ -35,9 +35,9 @@ module.exports = {
         {
             throw "Both Type and Name must be provided";
         }
-        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(id) != "string" || typeof(id) == "undefined" )
+        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(id) != "number" || typeof(id) == "undefined" )
         {
-            throw "Both id and Name should be of type string";
+            throw "Both id and Name should be of proper type ";
         }
         else if(image.length < 1)
         {
