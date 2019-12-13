@@ -181,14 +181,10 @@ const constructorMethod = app => {
         //TODO redirect to 404 if packageId not found in database
         const data = require("../data/hpackages");
         const packageDetailsByLocationId = await data.gethpackageByLocationId(packageId);
-        console.log(packageDetailsByLocationId);
+       
 
         const featuredColumnSize = 1;
-        // const packageDetails = {
-        //     id: packageId,
-        //     name: "Harsha",
-        //     description: "Dummy Package Description"
-        // }
+        
         res.status(200).render("package/details", {
             pageTitle: "Package Detail|" + packageId,
             packageDetailsByLocationId: util.convertListToRows(
