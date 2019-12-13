@@ -2,31 +2,33 @@ const util = require("./utils/common-utility");
 const constructorMethod = app => {
 
     var bodyParser = require("body-parser");
-    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(bodyParser.urlencoded({
+        extended: false
+    }));
     const bcrypt = require("bcryptjs");
 
-  app.get("/", async (req, res) => {
-    const data = require("../data/locations");
-    //Harsha: Use get first 6 pacakges to list the top packages
-    const featuredLocations = await data.getall();
-    //split package to multiple row based on column size
-    const featuredColumnSize = 3;
-    res.status(200).render("home/index", {
-      pageTitle: "Home Page",
-      featuredLocations: util.convertListToRows(
-        featuredLocations,
-        featuredColumnSize
-      )
-    });
-    /*
-        if (req.session !== undefined && req.session.username) {
-            res.redirect("/private");
-        } else {
-            res.status(200).render("login", {
-                pageTitle: "Login"
-            });
-        }
-        */
+    app.get("/", async (req, res) => {
+        const data = require("../data/locations");
+        //Harsha: Use get first 6 pacakges to list the top packages
+        const featuredLocations = await data.getall();
+        //split package to multiple row based on column size
+        const featuredColumnSize = 3;
+        res.status(200).render("home/index", {
+            pageTitle: "Home Page",
+            featuredLocations: util.convertListToRows(
+                featuredLocations,
+                featuredColumnSize
+            )
+        });
+        /*
+            if (req.session !== undefined && req.session.username) {
+                res.redirect("/private");
+            } else {
+                res.status(200).render("login", {
+                    pageTitle: "Login"
+                });
+            }
+            */
     });
 
 
@@ -113,9 +115,9 @@ const constructorMethod = app => {
             pageTitle: "Home | Plan My Trip",
         });
     });
-    app.post("/search", async (req, res) => {
+    app.get("/search", async (req, res) => {
         res.status(200).render("package/listing", {
-            pageTitle: "Search",
+            pageTitle: "Search Page",
         });
     });
     app.get("/user-profile", async (req, res) => {
@@ -123,38 +125,34 @@ const constructorMethod = app => {
             pageTitle: "User Profile",
         });
     });
-  /* checkout get is only for UI build and testing*/
-  app.get("/checkout", async (req, res) => {
-    res.status(200).render("booking/checkout", {
-      pageTitle: "Checkout"
+    /* checkout get is only for UI build and testing*/
+    app.get("/checkout", async (req, res) => {
+        res.status(200).render("booking/checkout", {
+            pageTitle: "Checkout"
+        });
     });
-  });
-  app.post("/checkout", async (req, res) => {
-    res.status(200).render("booking/checkout", {
-      pageTitle: "Checkout"
+    app.post("/checkout", async (req, res) => {
+        res.status(200).render("booking/checkout", {
+            pageTitle: "Checkout"
+        });
     });
-  });
     app.post("/confirmation", async (req, res) => {
         const data = require("../data/payment");
-        const paymentData = await data.getall(); 
+        const paymentData = await data.getall();
         var c = 0;
-        for(var i=0; i<paymentData.length; i++)
-        {
-            if(req.body.name == paymentData[i]['name'] && req.body.expirymonth == paymentData[i]['month'] && req.body.expiryyear==paymentData[i]['year'])
-            {
+        for (var i = 0; i < paymentData.length; i++) {
+            if (req.body.name == paymentData[i]['name'] && req.body.expirymonth == paymentData[i]['month'] && req.body.expiryyear == paymentData[i]['year']) {
                 var cardnumber_check = false;
                 var cvv_check = false;
-                cardnumber_check =  bcrypt.compare(req.body.cardnumber , paymentData[i]['cardnumber']);
-                cvv_check =  bcrypt.compare(req.body.cvv , paymentData[i]['cvv']);
-                if(cardnumber_check && cvv_check )
-                {
+                cardnumber_check = bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
+                cvv_check = bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
+                if (cardnumber_check && cvv_check) {
                     console.log("success!");
                     c++;
                 }
             }
         }
-        if(c==0)
-        {
+        if (c == 0) {
             console.log("fail");
         }
         res.status(200).render("booking/confirmation", {
