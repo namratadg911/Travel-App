@@ -1,0 +1,20 @@
+<form id="package-selected-form" name="package-selected-form" method="POST" action="/checkout">
+    <input type="hidden" name="package_id" value="1" />
+    <input type="hidden" name="num_of_people" value="2" />
+    <input type="hidden" name="date_of_trip" value="12/14/2019" />
+    <input type="hidden" name="total_price" value="1500" />
+    <input type="hidden" name="sltd_itr_hotel_room_types" value="" />
+</form>
+<script>
+
+    $(document).ready(function () {
+        $("#package-selected-form").submit(function () {
+            alert("validate and submit form-Submit the form here");
+        });
+        $("#book_online").click(function () {
+            alert("clicked book!!- Validate here");
+            $("#package-selected-form").submit();
+        });
+    });
+
+</script>

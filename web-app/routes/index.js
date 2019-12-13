@@ -5,18 +5,20 @@ const constructorMethod = app => {
     app.use(bodyParser.urlencoded({ extended: false }));
     const bcrypt = require("bcryptjs");
 
-
-    app.get("/", async (req, res) => {
-        const data = require("../data/locations");
-        //Harsha: Use get first 6 pacakges to list the top packages
-        const featuredLocations = await data.getall();
-        //split package to multiple row based on column size
-        const featuredColumnSize = 3
-        res.status(200).render("home/index", {
-            pageTitle: "Home Page",
-            featuredLocations: util.convertListToRows(featuredLocations, featuredColumnSize)
-        });
-        /*
+  app.get("/", async (req, res) => {
+    const data = require("../data/locations");
+    //Harsha: Use get first 6 pacakges to list the top packages
+    const featuredLocations = await data.getall();
+    //split package to multiple row based on column size
+    const featuredColumnSize = 3;
+    res.status(200).render("home/index", {
+      pageTitle: "Home Page",
+      featuredLocations: util.convertListToRows(
+        featuredLocations,
+        featuredColumnSize
+      )
+    });
+    /*
         if (req.session !== undefined && req.session.username) {
             res.redirect("/private");
         } else {
@@ -121,11 +123,17 @@ const constructorMethod = app => {
             pageTitle: "User Profile",
         });
     });
-    app.get("/checkout", async (req, res) => {
-        res.status(200).render("booking/checkout", {
-            pageTitle: "Checkout",
-        });
+  /* checkout get is only for UI build and testing*/
+  app.get("/checkout", async (req, res) => {
+    res.status(200).render("booking/checkout", {
+      pageTitle: "Checkout"
     });
+  });
+  app.post("/checkout", async (req, res) => {
+    res.status(200).render("booking/checkout", {
+      pageTitle: "Checkout"
+    });
+  });
     app.post("/confirmation", async (req, res) => {
         const data = require("../data/payment");
         const paymentData = await data.getall(); 

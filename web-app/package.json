@@ -4,6 +4,7 @@
   "description": "This is a travel app that allows users to search and plan holiday trips to domestic and international locations.",
   "main": "app.js",
   "scripts": {
+    "seed": "node data/index.js",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

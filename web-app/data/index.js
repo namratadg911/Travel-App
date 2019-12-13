@@ -3,7 +3,8 @@ const hpackage1 = require("./hpackages");
 const attraction1 = require("./attraction");
 const loc = require("./locations");
 const hotels = require("./hotels");
-
+const itineraryData = require("../tasks/itinerary-data");
+const itinerary = require("./itinerary");
 const connection = require('./connection');
 const bcrypt = require("bcryptjs");
 
@@ -295,7 +296,7 @@ CVV:  644
 
 
 
-
+   await itinerary.insertMany(itineraryData.getItineraries());
 
    const db = await connection();
     await db.serverConfig.close();
