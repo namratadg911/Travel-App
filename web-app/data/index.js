@@ -85,6 +85,49 @@ console.log(fiveKHotel);
    console.log(knine);
    const kten = await attraction1.create(10, "Periyar River", 1, "https://www.thenewsminute.com/sites/all/var/www/images/Periyar-river-turns-black-650.jpg");
    console.log(kten);
+// //Kerala
+//    const kone = await attraction1.create(1, "Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
+//    console.log(kone);
+//    const ktwo = await attraction1.create(2, "BackWater", 3, "https://www.indiaholidayarchitects.com/wp-content/uploads/2014/12/Palm-tree-tropical-forest-in-backwater-of-Kochin-Kerala-India-copy-1024x550.jpg");
+//    console.log(ktwo);
+//    const kthree = await attraction1.create(3, "Thekkady Safari", 5, "https://www.holidify.com/places/thekkady/");
+//    console.log(kthree);
+//    const kfour = await attraction1.create(4, "National Park", 4, "https://lh3.googleusercontent.com/proxy/M6zEpWHzLc5n_W0O8F6IW0s6bAcb9qkQRkWinR-k4Z71kiVSxeWu406h0GkLC5p6ONdS0_IcvtDyRNmEGx9BWnvZ-sAWHEbYBGYKYh87-D6B049N8RFs_3BpVsTZUQnACp5X2wSUwkXgtngYublv71t63p8=w464-h260-n-k-no");
+//    console.log(kfour);
+//    const kfive = await attraction1.create(5, "Water Falls", 2, "https://cdn.photographylife.com/wp-content/uploads/2015/06/AJT_8848-Edit-650x293.jpg");
+//    console.log(kfive);
+//    const ksix = await attraction1.create(6, "Caves", 1, "https://steemitimages.com/DQmUEm5wBiVKyYXXo9P1CY5ZAcAZjGtieXcve87TVo2VE1L/Edakkal-caves-Wayanad.png");
+//    console.log(ksix);
+//    const kseven = await attraction1.create(7, "Beach", 1, "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/Varkala_beach_750.jpg?itok=Nk4qC4Uf");
+//    console.log(kseven);
+//    const keight = await attraction1.create(8, "Fort Kochi", 1, "https://s1.it.atcdn.net/wp-content/uploads/2013/10/Sunset-over-Chinese-Fishing-nets-and-boat-in-Cochin-Kochi-Kerala-India-shutterstock_104171129-800x600.jpg");
+//    console.log(keight);
+//    const knine = await attraction1.create(9, "Vembanad Lake", 1, "images/vembanad-lake-kumarakom1.jpg");
+//    console.log(knine);
+//    const kten = await attraction1.create(10, "Periyar River", 1, "https://www.thenewsminute.com/sites/all/var/www/images/Periyar-river-turns-black-650.jpg");
+//    console.log(kten);
+
+//Himalayas
+   const hone = await attraction1.create(11, "Temple", 2, "https://handluggageonly.co.uk/wp-content/uploads/2017/09/IMG_4482.jpg");
+   console.log(hone);
+   const htwo = await attraction1.create(12, "Cliffside Caves", 4, "https://img.traveltriangle.com/blog/wp-content/uploads/2018/09/Paro-Taktsang-Cover.jpg");
+   console.log(htwo);
+   const hthree = await attraction1.create(13, "Pashupatinath Temple", 5, "http://www.helpmeagain.com/wp-content/uploads/2017/04/MAN_7441.jpg");
+   console.log(hthree);
+   const hfour = await attraction1.create(14, "Buddhist Temple", 2, "https://i.pinimg.com/originals/5c/71/73/5c7173f85a750b51e1c0161fa0a41bbb.jpg");
+   console.log(hfour);
+   const hfive = await attraction1.create(15, "Kathmandu Durbar Square ", 3, "https://www.betterplacestravel.com/wp-content/uploads/2017/03/Nepal-Kathmandu-Durbar-square-2w.jpg");
+   console.log(hfive);
+   const hsix = await attraction1.create(16, "Trekking", 6, "https://www.adventuregreathimalaya.com/wp-content/uploads/2016/07/manaslu12.jpg");
+   console.log(hsix);
+   const hseven = await attraction1.create(17, "Kathmandu Valley", 3, "https://cdn.britannica.com/s:700x500/48/10548-004-B1063E67/Kathmandu-Nepal-Valley-background-Bairavkund-Range.jpg");
+   console.log(hseven);
+   const height = await attraction1.create(18, "Annapurna Sanctuary", 5, "https://ssl.c.photoshelter.com/img-get2/I0000vnvCm4kPHA4/fit=1000x750/07NEP-2719.jpg");
+   console.log(height);
+   const hnine = await attraction1.create(19, "Mount Kailash", 6, "https://www.tibettravel.org/blog/wp-content/uploads/2017/01/mount-kailash-3.jpg");
+   console.log(hnine);
+   const hten = await attraction1.create(20, "Rohtang La ", 4, "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/10/Rohtang-pass-2.jpg");
+   console.log(hten);
 
    
 
