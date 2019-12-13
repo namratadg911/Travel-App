@@ -1,6 +1,7 @@
 const payments = require("./payment");
 const hpackage1 = require("./hpackages");
 const attraction1 = require("./attraction");
+const loc = require("./locations");
 
 const connection = require('./connection');
 const bcrypt = require("bcryptjs");
@@ -9,18 +10,32 @@ const bcrypt = require("bcryptjs");
 
 async function create()
 {
-//    const one = await hpackage1.create("kerala", "1500", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
-//    console.log(one);
-//    const two = await hpackage1.create("Himalayas", "2000", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
-//    console.log(two);
-//    const three = await hpackage1.create("TamilNadu", "18000", "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
-//    console.log(three);
-//    const four = await hpackage1.create("AndhraPradesh", "1700", "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
-//    console.log(four);
-//    const five = await hpackage1.create("Punjab", "1700", "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
-//    console.log(five);
-//    const six = await hpackage1.create("WestBengal", "1700", "https://static.toiimg.com/photo/62569054/.jpg");
-//    console.log(six);
+   const one = await hpackage1.create("kerala", "1500", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   console.log(one);
+   const two = await hpackage1.create("Himalayas", "2000", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
+   console.log(two);
+   const three = await hpackage1.create("TamilNadu", "18000", "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
+   console.log(three);
+   const four = await hpackage1.create("AndhraPradesh", "1700", "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
+   console.log(four);
+   const five = await hpackage1.create("Punjab", "1700", "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
+   console.log(five);
+   const six = await hpackage1.create("WestBengal", "1700", "https://static.toiimg.com/photo/62569054/.jpg");
+   console.log(six);
+
+
+   const oneLoc = await loc.create( "1","Kerala", "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   console.log(oneLoc);
+   const twoLoc = await loc.create( "2", "Himalayas","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
+   console.log(twoLoc);
+   const threeLoc = await loc.create("3","Tamil Nadu",  "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
+   console.log(threeLoc);
+   const fourLoc = await loc.create( "4","Andhra Pradesh", "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
+   console.log(fourLoc);
+   const fiveLoc = await loc.create("5","Punjab",  "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
+   console.log(fiveLoc);
+   const sixLoc = await loc.create( "6", "West Bengal","https://static.toiimg.com/photo/62569054/.jpg");
+   console.log(sixLoc);
 
 
    const aone = await attraction1.create("Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
