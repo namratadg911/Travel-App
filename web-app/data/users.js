@@ -111,16 +111,6 @@ module.exports = {
         return await this.get(id);
         },
 
-    async remove(id){
-        if(!id) throw "Provide an id";
-
-        const userCollection = await user();
-        const removedata = await userCollection.findOne({ _id: ObjectId(id) });
-        
-        if (removedata.deletedCount === 0)  throw `Could not delete user with id of ${id}`;
-        
-    },
-    
 };
 
 
