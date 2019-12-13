@@ -29,6 +29,15 @@ module.exports = {
     const packages = await hpackageCollection.find({}).toArray();
     return packages;
    },
+   
+
+   async gethpackageByLocationId(id)
+   {
+    const hpackageCollection = await hpackage();
+    const packages = await hpackageCollection.find({location_id: id}).toArray();
+    return packages;
+   },
+
     async create(id,name, description, price, location_id, image)
     {
         if(!price || !name)
