@@ -67,16 +67,16 @@ async function create()
 
 //Himalaya Hotels
 
-const sixKHotel = await hotels.create(6, "Hotel Yak & Yeti", "https://pix6.agoda.net/hotelImages/290/290041/290041_14030513270018558804.jpg?s=1024x768",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
-console.log(sixKHotel);
-const sevenKHotel = await hotels.create( 7, "Hotel Mount Kailash",  "https://g5.globimmo.net/img.php?src=server3/a/4/1/7/c/c266722bfcdf9a9afc3d0fb690a9daa5b95768e6d2e0a8d1a3c4ae8a5cc.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
-console.log(sevenKHotel);
-const eightKHotel = await hotels.create(8, "Hotel Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
-console.log(eightKHotel);
-const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg)",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
-console.log(nineKHotel);
-const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg)",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
-console.log(tenKHotel);
+// const sixKHotel = await hotels.create(6, "Hotel Yak & Yeti", "https://pix6.agoda.net/hotelImages/290/290041/290041_14030513270018558804.jpg?s=1024x768",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+// console.log(sixKHotel);
+// const sevenKHotel = await hotels.create( 7, "Hotel Mount Kailash",  "https://g5.globimmo.net/img.php?src=server3/a/4/1/7/c/c266722bfcdf9a9afc3d0fb690a9daa5b95768e6d2e0a8d1a3c4ae8a5cc.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+// console.log(sevenKHotel);
+// const eightKHotel = await hotels.create(8, "Hotel Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+// console.log(eightKHotel);
+// const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg)",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+// console.log(nineKHotel);
+// const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg)",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+// console.log(tenKHotel);
 
 
 //Kerala
@@ -117,7 +117,7 @@ console.log(tenKHotel);
 //    console.log(kseven);
 //    const keight = await attraction1.create(8, "Fort Kochi", 1, "https://s1.it.atcdn.net/wp-content/uploads/2013/10/Sunset-over-Chinese-Fishing-nets-and-boat-in-Cochin-Kochi-Kerala-India-shutterstock_104171129-800x600.jpg");
 //    console.log(keight);
-//    const knine = await attraction1.create(9, "Vembanad Lake", 1, "images/vembanad-lake-kumarakom1.jpg");
+//    const knine = await attraction1.create(9, "Vembanad Lake", 1, "https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2019/01/Vembanad-Lake1.jpg");
 //    console.log(knine);
 //    const kten = await attraction1.create(10, "Periyar River", 1, "https://www.thenewsminute.com/sites/all/var/www/images/Periyar-river-turns-black-650.jpg");
 //    console.log(kten);
@@ -168,28 +168,65 @@ console.log(tenKHotel);
 
 //Andhra Pradesh
 
-   const anone = await attraction1.create(31, "Tirupathi", 7, "https://lh3.googleusercontent.com/proxy/viO5SQyjoo32XqnSrcDFL9-To3Ncu2x8UaY5mSqoxSqAFsOVgy3vl8U8b5c1xZ7KHx9-C5CEqOdIApnLCMEd0VTrtqIelZoIp73uNtMQi_6ywSchcEKmCR7iAWnfDusU_RQ3YzGaUXhNB4XMItiuOifPU8k=w336-h190-n-k-no");
-   console.log(anone);
-   const antwo = await attraction1.create(32, "Araku Valley", 3, "https://lh4.googleusercontent.com/proxy/kZ7OudtC_uc-J1D7tmigrRYDkfjuExtgEIltg0NijkvJ5rW0ydvD-_KB88SYO7Ulp1RNuhzg68dtWudxH7_zmI0yBWzNuvOPqGP9qpRgDjQSODPW5i8uwT1_yobCiPN05JYgcadIpP6c7kbXorONT11dSco=w357-h238-k-no");
-   console.log(antwo);
-   const anthree = await attraction1.create(33, "Borra Caves", 4, "https://lh5.googleusercontent.com/-wCS0nZblX9M/WWr8U0r66vI/AAAAAAABQ38/PyxjNFoYGmcKm9KryzwWi0dAEKHicGuigCLIBGAYYCw/w317-h238-k-no/");
-   console.log(anthree);
-   const anfour = await attraction1.create(34, "Horsley Hills", 4, "https://lh3.googleusercontent.com/-INswlbdF3GE/WwxQWHAnWLI/AAAAAAABCTU/U0XQrN-g7fceflTM5rDqI_Xg3bu8xU3kwCLIBGAYYCw/w441-h238-k-no/");
-   console.log(anfour);
-   const anfive = await attraction1.create(35, "Godavari River", 2, "https://lh4.googleusercontent.com/-YJBdb_fwY-8/XbSK5IrUCaI/AAAAAAAAdnM/dw-UunjE1x0hIoVK3ofdR1ic7EgYyw9yACLIBGAYYCw/w428-h238-k-no/");
-   console.log(anfive);
-   const ansix = await attraction1.create(36, "Nagarjunsagar-Srisailam Tiger Reserve", 5, "https://lh4.googleusercontent.com/-gf_lZsnhUKI/XNpXiEAqf5I/AAAAAAAARKg/UVSFkfePRKsx4cAoMa_ynHPx2tWG7F17QCLIBGAYYCw/w317-h238-k-no/");
-   console.log(ansix);
-   const anseven = await attraction1.create(37, "Kondapalli", 2, "https://lh4.googleusercontent.com/proxy/sWRUtWfs3A9i0T_jJlzKyd1q0HzJl4gX5Y_a0pN71O1Zq5_P6-6TWAiDodYNUNFAq5Q6w5PXkQ32D9GfBDjzutUt8oJjyeDrh7t7NOYuhLA-yOb7EON1R-g3sxk9HrTIAlVU83HAJyBZTb3PWN700SUJHV8=w423-h238-k-no");
-   console.log(anseven);
-   const aneight = await attraction1.create(38, "Tadipatri", 2, "https://lh6.googleusercontent.com/-suyuk0ywEGQ/XWFrh9KItBI/AAAAAAAA3Vw/I7aBxAW5vFQIAw5zTBzuj8zs7hZHigPjwCLIBGAYYCw/w179-h238-k-no/");
-   console.log(aneight);
-   const annine = await attraction1.create(39, "Nandyala", 4, "https://lh5.googleusercontent.com/-1EZBAqf6h3Q/XM1qaWDpqpI/AAAAAAAACxw/qa2GGzawRBIJaogaBFJeTWvagYtUa1LIwCLIBGAYYCw/w358-h238-k-no/");
-   console.log(annine);
-   const anten = await attraction1.create(40, "Penukonda", 4, "https://lh5.googleusercontent.com/-AAyEdnZktMU/XVNuIK9u5QI/AAAAAAAArbw/puMcmaBU6DUkiFT4XqlSck-QNe3I1JvrwCLIBGAYYCw/w522-h238-k-no/");
-   console.log(anten);
+   // const anone = await attraction1.create(31, "Tirupathi", 7, "https://lh3.googleusercontent.com/proxy/viO5SQyjoo32XqnSrcDFL9-To3Ncu2x8UaY5mSqoxSqAFsOVgy3vl8U8b5c1xZ7KHx9-C5CEqOdIApnLCMEd0VTrtqIelZoIp73uNtMQi_6ywSchcEKmCR7iAWnfDusU_RQ3YzGaUXhNB4XMItiuOifPU8k=w336-h190-n-k-no");
+   // console.log(anone);
+   // const antwo = await attraction1.create(32, "Araku Valley", 3, "https://lh4.googleusercontent.com/proxy/kZ7OudtC_uc-J1D7tmigrRYDkfjuExtgEIltg0NijkvJ5rW0ydvD-_KB88SYO7Ulp1RNuhzg68dtWudxH7_zmI0yBWzNuvOPqGP9qpRgDjQSODPW5i8uwT1_yobCiPN05JYgcadIpP6c7kbXorONT11dSco=w357-h238-k-no");
+   // console.log(antwo);
+   // const anthree = await attraction1.create(33, "Borra Caves", 4, "https://lh5.googleusercontent.com/-wCS0nZblX9M/WWr8U0r66vI/AAAAAAABQ38/PyxjNFoYGmcKm9KryzwWi0dAEKHicGuigCLIBGAYYCw/w317-h238-k-no/");
+   // console.log(anthree);
+   // const anfour = await attraction1.create(34, "Horsley Hills", 4, "https://lh3.googleusercontent.com/-INswlbdF3GE/WwxQWHAnWLI/AAAAAAABCTU/U0XQrN-g7fceflTM5rDqI_Xg3bu8xU3kwCLIBGAYYCw/w441-h238-k-no/");
+   // console.log(anfour);
+   // const anfive = await attraction1.create(35, "Godavari River", 2, "https://lh4.googleusercontent.com/-YJBdb_fwY-8/XbSK5IrUCaI/AAAAAAAAdnM/dw-UunjE1x0hIoVK3ofdR1ic7EgYyw9yACLIBGAYYCw/w428-h238-k-no/");
+   // console.log(anfive);
+   // const ansix = await attraction1.create(36, "Nagarjunsagar-Srisailam Tiger Reserve", 5, "https://lh4.googleusercontent.com/-gf_lZsnhUKI/XNpXiEAqf5I/AAAAAAAARKg/UVSFkfePRKsx4cAoMa_ynHPx2tWG7F17QCLIBGAYYCw/w317-h238-k-no/");
+   // console.log(ansix);
+   // const anseven = await attraction1.create(37, "Kondapalli", 2, "https://lh4.googleusercontent.com/proxy/sWRUtWfs3A9i0T_jJlzKyd1q0HzJl4gX5Y_a0pN71O1Zq5_P6-6TWAiDodYNUNFAq5Q6w5PXkQ32D9GfBDjzutUt8oJjyeDrh7t7NOYuhLA-yOb7EON1R-g3sxk9HrTIAlVU83HAJyBZTb3PWN700SUJHV8=w423-h238-k-no");
+   // console.log(anseven);
+   // const aneight = await attraction1.create(38, "Tadipatri", 2, "https://lh6.googleusercontent.com/-suyuk0ywEGQ/XWFrh9KItBI/AAAAAAAA3Vw/I7aBxAW5vFQIAw5zTBzuj8zs7hZHigPjwCLIBGAYYCw/w179-h238-k-no/");
+   // console.log(aneight);
+   // const annine = await attraction1.create(39, "Nandyala", 4, "https://lh5.googleusercontent.com/-1EZBAqf6h3Q/XM1qaWDpqpI/AAAAAAAACxw/qa2GGzawRBIJaogaBFJeTWvagYtUa1LIwCLIBGAYYCw/w358-h238-k-no/");
+   // console.log(annine);
+   // const anten = await attraction1.create(40, "Penukonda", 4, "https://lh5.googleusercontent.com/-AAyEdnZktMU/XVNuIK9u5QI/AAAAAAAArbw/puMcmaBU6DUkiFT4XqlSck-QNe3I1JvrwCLIBGAYYCw/w522-h238-k-no/");
+   // console.log(anten);
 
+//Punjab
+   const pone = await attraction1.create(41, "Amritsar", 3, "https://lh5.googleusercontent.com/-aSSGg-1PHa8/V1LVr8hl28I/AAAAAAAACPQ/Ie0L1e5nr7UdVgKl2tO-fUWPN8B-ImCGACLIBGAYYCw/w423-h238-k-no/");
+   console.log(pone);
+   const ptwo = await attraction1.create(42, "Pathankot", 2, "https://lh5.googleusercontent.com/-B3MXtaDsfSQ/W7CK94RfOtI/AAAAAAAAYyA/nws_nfrdCLcIrhq6d8UxWboLNSTW2CkjQCLIBGAYYCw/w425-h238-k-no/");
+   console.log(ptwo);
+   const pthree = await attraction1.create(43, "Bislaspur", 4, "https://lh3.googleusercontent.com/-EVjKcJg_fzs/XDnlRfUPTvI/AAAAAAAALbw/oZo33IXmx2c8GuA4f__Fax5J0rqOzrEhgCLIBGAYYCw/w317-h238-k-no/");
+   console.log(pthree);
+   const pfour = await attraction1.create(44, "Nangal", 2, "https://lh4.googleusercontent.com/-T4uQ4k-lMwM/V9xNatRIOjI/AAAAAAAAAC8/xhOBryCF0XIuP6ttI1fw1kk-FyNLpsWpwCLIBGAYYCw/w413-h238-k-no/");
+   console.log(pfour);
+   const pfive = await attraction1.create(45, "Jagraon", 3, "https://lh3.googleusercontent.com/-BcoX5aeSuqU/Wj6W5Hpd6dI/AAAAAAAAJD4/49ij1ymEkToksy4Q4thacucTbUR7JpDrgCLIBGAYYCw/w423-h238-k-no/");
+   console.log(pfive);
+   const psix = await attraction1.create(46, "Malerkotla", 5, "https://lh3.googleusercontent.com/proxy/HxJcaAx4_PYGpwh_M0hcRkb3-WwUWp6MCPSFtEboc7NicwpBfEhVMusLUfUqbBD98p5Vz8ejcHUuQFwaAMSB5VV_ipOSndOFtLfywNhOyueCbrs3eupDWbLYMUp7C3s01ofgKHAfD9aTxRBueh6456zV9TQ=w358-h238-k-no");
+   console.log(psix);
+   const pseven = await attraction1.create(47, "Kartarpur", 4, "https://lh3.googleusercontent.com/-wc97NNtU45s/XXS1RsLMo0I/AAAAAAAApKM/XZ5L0wndcZMNSAg3d-1AAy8wJjCc1-RWgCLIBGAYYCw/w317-h238-k-no/");
+   console.log(pseven);
    
+//West Bengal
+   const wbone = await attraction1.create(48, "Sundarban National Park", 5, "https://ihpl.b-cdn.net/pictures/wildlife/parks/sunderbans-55.jpeg");
+   console.log(wbone);
+   const wbtwo = await attraction1.create(49, "Victoria Memorial", 3, "https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2018/04/Victoria-Memorial.jpg");
+   console.log(wbtwo);
+   const wbthree = await attraction1.create(50, "Tiger Hill", 4, "http://shahtour.com/blogs/wp-content/uploads/2017/04/How-to-reach-tiger-hill-from-Darjeeling.jpg");
+   console.log(wbthree);
+   const wbfour = await attraction1.create(51, "Howrah Bridge", 1, "https://images-na.ssl-images-amazon.com/images/I/61V5kdbUUXL.jpg");
+   console.log(wbfour);
+   const wbfive = await attraction1.create(52, "Dakshineshwar Kali Temple", 2, "https://static.toiimg.com/thumb/47798909/47798885.jpg?width=650&height=433&resize=true&resizeMode=5");
+   console.log(wbfive);
+   const wbsix = await attraction1.create(53, "Mirik", 4, "https://static.toiimg.com/thumb/36109035/Mirik.jpg?width=650&height=433&resize=true&resizeMode=5");
+   console.log(wbsix);
+   const wbseven = await attraction1.create(54, "Ghum Monastery", 2, "//live.staticflickr.com/128/357956154_fadc2c3819_3k.jpg");
+   console.log(wbseven);
+   const wbeight = await attraction1.create(55, "Eden Garden", 3, "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201504/eden-gardens_650_040615092853.jpg");
+   console.log(wbeight);
+   const wbnine = await attraction1.create(56, "Birla Temple", 3, "https://static.toiimg.com/thumb/48080165/47799086.jpg?width=650&height=433&resize=true&resizeMode=5");
+   console.log(wbnine);
+   const wbten = await attraction1.create(57, "Rock Garden", 4, "http://www.therockgardens.co.uk/wp-content/uploads/sites/433/2017/02/Barbotey-Rock-Garden.png");
+   console.log(wbten);
+
 
    // const saltRounds = 5;
 
