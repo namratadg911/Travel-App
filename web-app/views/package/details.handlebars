@@ -1,5 +1,7 @@
 <div class="container-fluid text-center">
+    {{#each packageDetailsByLocationId }}
     <div class="row content">
+        {{#each this}}
         <div class="col-sm-1 text-left"></div>
         <div class="col-sm-8 text-left">
             {{> package-details/info}}
@@ -9,7 +11,9 @@
             {{> package-details/booking-confirm}}
         </div>
         <div class="col-sm-1 text-left"></div>
+        {{/each}}
     </div>
+    {{/each}}
 </div>
 
-{{> package-details/selection-form}}
+{{> package-details/selection-form}} 
