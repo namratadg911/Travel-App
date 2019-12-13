@@ -17,3 +17,8 @@ footer {
 }
 
 /*CSS that applies across sites*/
+
+/*Custom css for package details*/
+.row-buffer {
+    margin-top: 20px;
+}

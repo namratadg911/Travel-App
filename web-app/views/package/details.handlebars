@@ -2,11 +2,8 @@
     <div class="row content">
         <div class="col-sm-1 text-left"></div>
         <div class="col-sm-8 text-left">
-            <h1>{{package.name}}</h1>
-            <p>{{package.description}}</p>
-            <hr>
-            <h3>Itinerary</h3>
-            <p>Build the Itinerary listing below this element</p>
+            {{> package-details/info}}
+            {{> package-details/itinerary}}
         </div>
         <div class="col-sm-2 sidenav">
             <div class="well">
