@@ -73,11 +73,62 @@ const sevenKHotel = await hotels.create( 7, "Hotel Mount Kailash",  "https://g5.
 console.log(sevenKHotel);
 const eightKHotel = await hotels.create(8, "Hotel Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(eightKHotel);
-const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg)",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(nineKHotel);
-const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg)",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(tenKHotel);
 
+//Tamil Nadu Hotels
+
+const elevenKHotel = await hotels.create(11, "Visalam Hotel", "http://d3e7bfg0h5jt4g.mrandmrssmith.com/images/listing_gallery_carousel_466/223769-visalam-tamil-nadu-india.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(elevenKHotel);
+const twelveKHotel = await hotels.create( 12, "ITC Grand Chola",  "https://hi-cdn.t-rp.co.uk/images/hotels/3452704/59?width=870&height=480&crop=false", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(twelveKHotel);
+const thirteenKHotel = await hotels.create(13, "Hotel Radisson Blu", "https://r-cf.bstatic.com/images/hotel/max1024x768/339/33960936.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(thirteenKHotel);
+const onefourKHotel = await hotels.create( 14, "Sheraton",  "http://www.hotelstamilnadu.com/chennaihotels/chola/gif/hotel12.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(onefourKHotel);
+const onefiveKHotel = await hotels.create(15, "Resort Sullivan Court", "https://www.holidaysat.com/gallery/Fortune-Resort-Sullivan-Court-Ooty-00.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(onefiveKHotel);
+
+//Andhra Pradesh Hotels
+
+const onesixKHotel = await hotels.create(16, "Taj Residency", "http://www.fhotels.net/Admin/PHOTOS/Hotels/3036/3036_1_18.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(onesixKHotel);
+const onesevenKHotel = await hotels.create( 17, "Hotel Novotel",  "http://resortsindia.ca/images/top.png", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(onesevenKHotel);
+const oneeightKHotel = await hotels.create(18, "Four points by Sheraton", "https://cache.marriott.com/marriottassets/marriott/VTZFP/vtzfp-facade-4513-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(oneeightKHotel);
+const onenineKHotel = await hotels.create( 19, "Marasa Sarovar",  "https://media.expedia.com/hotels/10000000/9810000/9807300/9807212/9807212_24_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(onenineKHotel);
+const twentyKHotel = await hotels.create(20, "Hotel Sai Priya", "https://q-xx.bstatic.com/xdata/images/hotel/max500/165162402.jpg?k=49934b7f27d820374140cc76ece72f14a2d8e49473f5e7bd474f59f00bfbb5c1&o=",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(twentyKHotel);
+
+//Punjab Hotels
+
+const twooneKHotel = await hotels.create(21, "Cabana Orchid", "https://www.t2india.com/Images/Places/JUC/associates/A2850_1.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(twooneKHotel);
+const twotwoKHotel = await hotels.create( 22, "Svaasa Hotel",  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToj0j42A_utP0pNY2A7rjPNbS_SvFN1lay4AFKz5-CTGJZfG7C&s", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(twotwoKHotel);
+const twothreeKHotel = await hotels.create(23, "Radisson Blu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUEoJW1bDu8QfrknSdeYgB4_FNPCH1lY7DPpPdwL1aJ9Wd7L5aw&s",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(twothreeKHotel);
+const twofourKHotel = await hotels.create( 24, "Oberoi Sukhvilas",  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcNyu5eglSSkg0WIgyYCMJxvToTLXKhZ2jOSQp2yUf3g6-8hVbRQ&s",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(twofourKHotel);
+const twofiveKHotel = await hotels.create(25, "Luxury Hotel", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElVYHxTb0tIco55QV3yJTk7C02GaK90aQdyCj6UvUlDemxrgmaA&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(twofiveKHotel);
+
+//West Bengal Hotels
+
+const twosixKHotel = await hotels.create(26, "Hotel Anaya Kutir", "https://media.cntraveller.in/wp-content/uploads/2014/12/Anaya-Kutir-866x487.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+console.log(twosixKHotel);
+const twosevenKHotel = await hotels.create( 27, "Hotel Raichak",  "https://i.pinimg.com/originals/80/32/65/803265c507af39e00192dd1a63c2c894.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+console.log(twosevenKHotel);
+const twoeightKHotel = await hotels.create(28, "Hotel Siliguri", "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/99/51/99510_v4.jpeg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+console.log(twoeightKHotel);
+const twonineKHotel = await hotels.create( 29, "The Oberoi Hotels",  "https://indialuxurytrip.files.wordpress.com/2013/09/the-oberoi-amarvilas.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+console.log(twonineKHotel);
+const thirtyKHotel = await hotels.create(30, "Hotel Mainak", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a2gwhv12Bv9z7d_36Z-5uBNXVjRFvfxEsQn0SR1bBFbPhH-t&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+console.log(thirtyKHotel);
 
 //Kerala
    const kone = await attraction1.create(1, "Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
