@@ -63,33 +63,64 @@ module.exports = {
 
         return user3;
         },
+
+    async updateUser(id, updatedUser) {
     
-    // async remove(id){
-    //     if(!id) throw "Provide an id";
+        const userCollection = await user();
+    
+        const updatedUserData = {};
+    
+        if (updatedUser.email) {
+            updatedUserData.email = updatedUser.email;
+        }
+    
+        if (updatedUser.firstname) {
+            updatedUserData.firstname = updatedUser.firstname;
+        }
+    
+        if (updatedUser.lastname) {
+            updatedUserData.lastname = updatedUser.lastname;
+        }
 
-    //     const userCollection = await user();
-    //     const removedata = await animalCollection.findOne({ _id: ObjectId(id) });
-    //     const remdata = await animalCollection.removeOne(removedata);
+        if (updatedUser.username) {
+            updatedUserData.username = updatedUser.username;
+        }
 
-    //     if (remdata.deletedCount === 0)  throw `Could not delete dog with id of ${id}`;
+        if (updatedUser.hashedPassword) {
+            updatedUserData.hashedPassword = updatedUser.hashedPassword;
+        }
+
+        if (updatedUser.address) {
+            updatedUserData.address = updatedUser.address;
+        }
+
+        if (updatedUser.state) {
+            updatedUserData.state = updatedUser.state;
+        }
+
+        if (updatedUser.city) {
+            updatedUserData.state = updatedUser.city;
+        }
+
+        if (updatedUser.zip) {
+            updatedUserData.state = updatedUser.zip;
+        }
         
-    //     else
-    //         return removedata;
-    // },
-    // async rename(id, newName) {
-    //     if (!id) throw "You must provide a post id";
-    //     if (!newName) throw "You must provide a name";
-    //     if(typeof newName !== 'string') throw "name should be string";
-            
-    //     const animalCollection = await animals();
+        await userCollection.updateOne({_id: id}, {$set: updatedUserData});
+    
+        return await this.get(id);
+        },
+
+    async remove(id){
+        if(!id) throw "Provide an id";
+
+        const userCollection = await user();
+        const removedata = await userCollection.findOne({ _id: ObjectId(id) });
         
-    //     //https://stackoverflow.com/questions/38883285/error-the-update-operation-document-must-contain-atomic-operators-when-running/38883596
-    //     const updatedata = await animalCollection.updateOne({ _id: ObjectId(id)}, {$set:{name: newName}});
-    //     if (updatedata.modifiedCount === 0) 
-    //         throw "could not update animal successfully";
-    //     return await this.get(id); 
-      
-    // },
+        if (removedata.deletedCount === 0)  throw `Could not delete user with id of ${id}`;
+        
+    },
+    
 };
 
 
