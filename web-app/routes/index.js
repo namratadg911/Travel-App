@@ -7,7 +7,7 @@ const constructorMethod = app => {
 
 
     app.get("/", async (req, res) => {
-        const data = require("../data/hpackages");
+        const data = require("../data/locations");
         //Harsha: Use get first 6 pacakges to list the top packages
         const featuredLocations = await data.getall();
         //split package to multiple row based on column size
@@ -15,8 +15,6 @@ const constructorMethod = app => {
         res.status(200).render("home/index", {
             pageTitle: "Home Page",
             featuredLocations: util.convertListToRows(featuredLocations, featuredColumnSize)
-
-
         });
         /*
         if (req.session !== undefined && req.session.username) {

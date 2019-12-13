@@ -12,7 +12,7 @@ module.exports = {
         else
         {
             const hpackageCollection = await hpackage();
-            const hpackage1 = await hpackageCollection.findOne({_id:ObjectId(id)});
+            const hpackage1 = await hpackageCollection.findOne({_id: id});
             if(hpackage1 == null)
             {
                 return "No hpackage with the given ID";
@@ -29,13 +29,13 @@ module.exports = {
     const packages = await hpackageCollection.find({}).toArray();
     return packages;
    },
-    async create(name, price, image)
+    async create(id,name, description, price, location_id, image)
     {
         if(!price || !name)
         {
             throw "Both Type and Name must be provided";
         }
-        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(price) != "string" || typeof(price) == "undefined" )
+        else if(typeof(name) != "string" || typeof(name) == "undefined" || typeof(price) != "number" || typeof(price) == "undefined" )
         {
             throw "Both price and Name should be of type string";
         }
@@ -46,9 +46,11 @@ module.exports = {
         else
         {
             let newhpackage = {
+                _id:id,
                 name: name,
+                description: description,
                 price: price,
-                location_id: "",
+                location_id: location_id,
                 list: [],
                 image: image
             };
