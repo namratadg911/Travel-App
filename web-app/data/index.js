@@ -14,27 +14,27 @@ async function create()
 {
    const one = await hpackage1.create(1,"Mini Package", "3-Day tour", 1500, 1, [1,2,3], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2CIZ2BWJj6gAwCzVcHSqv84dDsinVsIZ07_CnYRY-_XFp0q-fQ&s");
    console.log(one);
-   const oneone = await hpackage1.create(2,"Mega Package", "5-Day tour", 1500,  1,[1,2,3,4,5], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KF5qdNqs1drhB9UARW8cOrIFo-5MPiWoI0NjqE6eKZrrtfo_2Q&s");
+   const oneone = await hpackage1.create(2,"Mega Package", "5-Day tour", 2000,  1,[1,2,3,4,5], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KF5qdNqs1drhB9UARW8cOrIFo-5MPiWoI0NjqE6eKZrrtfo_2Q&s");
    console.log(oneone);
-   const two = await hpackage1.create(3,"Mini Package", "3-Day tour", 2000,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
+   const two = await hpackage1.create(3,"Mini Package", "3-Day tour", 1400,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
    console.log(two);
-   const twotwo = await hpackage1.create(4,"Mega Package", "5-Day tour",  2000,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFawcukP8mv8TT41QkRTJULq4k31XXZJOWl47vrnHniz0uN71scg&s");
+   const twotwo = await hpackage1.create(4,"Mega Package", "5-Day tour",  1900,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFawcukP8mv8TT41QkRTJULq4k31XXZJOWl47vrnHniz0uN71scg&s");
    console.log(twotwo);
-   const three = await hpackage1.create(5,"Mini Package", "3-Day tour", 18000,  3, [11,12,13],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtLSKszSougDZJcuyVEnzpgwEhWu2iU7JUqiTpVJCtC1-Rib_Bg&s");
+   const three = await hpackage1.create(5,"Mini Package", "3-Day tour", 16000,  3, [11,12,13],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtLSKszSougDZJcuyVEnzpgwEhWu2iU7JUqiTpVJCtC1-Rib_Bg&s");
    console.log(three);
-   const threethree = await hpackage1.create(6,"Mega Package", "5-Day tour", 18000,  3, [11,12,13,14,15],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const threethree = await hpackage1.create(6,"Mega Package", "5-Day tour", 2100,  3, [11,12,13,14,15],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
    console.log(threethree);
    const four = await hpackage1.create(7,"Mini Package", "3-Day tour", 1700,  4, [16,17,18],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qcQjmUloCvrZA8gy4Py_4mg89Ka01a-qcd_K7xIiI7WSY6HHSA&s");
    console.log(four);
-   const fourfour = await hpackage1.create(8,"Mega Package", "5-Day tour", 1700,  4, [16,17,18,19,20],"https://cdn.britannica.com/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg");
+   const fourfour = await hpackage1.create(8,"Mega Package", "5-Day tour", 2200,  4, [16,17,18,19,20],"https://cdn.britannica.com/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg");
    console.log(fourfour);
-   const five = await hpackage1.create(9,"Mini Package", "3-Day tour", 1900,  5, [21,22,23],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const five = await hpackage1.create(9,"Mini Package", "3-Day tour", 1300,  5, [21,22,23],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
    console.log(five);
-   const fivefive = await hpackage1.create(10,"Mega Package", "5-Day tour", 1900, 5, [21,22,23,24,25],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjLM8Z0PA9tIsYY-FxA539_2UBe89MwyDcRLQutl_mQdBu_sO&s");
+   const fivefive = await hpackage1.create(10,"Mega Package", "5-Day tour", 1800, 5, [21,22,23,24,25],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjLM8Z0PA9tIsYY-FxA539_2UBe89MwyDcRLQutl_mQdBu_sO&s");
    console.log(fivefive);
-   const six = await hpackage1.create(11,"Mini Package", "3-Day tour", 1600, 6, [26,27,28],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NaHVTHYEtCNdJNeLQf0_wU6F8HFqqQArzXh7ZEYAsbYgjdrP5g&s");
+   const six = await hpackage1.create(11,"Mini Package", "3-Day tour", 2000, 6, [26,27,28],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NaHVTHYEtCNdJNeLQf0_wU6F8HFqqQArzXh7ZEYAsbYgjdrP5g&s");
    console.log(six);
-   const sixsix = await hpackage1.create(12,"Mega Package", "5-Day tour", 1600, 6, [26,27,28,29,30],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSdUZ8MF5EzNFFJJb7nB1UqWzXVDAiiCPN28QDnb76Rr2lLVfqw&s");
+   const sixsix = await hpackage1.create(12,"Mega Package", "5-Day tour", 2500, 6, [26,27,28,29,30],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSdUZ8MF5EzNFFJJb7nB1UqWzXVDAiiCPN28QDnb76Rr2lLVfqw&s");
    console.log(sixsix);
 
 
