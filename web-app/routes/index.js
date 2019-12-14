@@ -163,7 +163,7 @@ const constructorMethod = app => {
                     var cvv_check = false;
                     cardnumber_check = await bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
                     console.log(cardnumber_check);
-                    cvv_check =await bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
+                    cvv_check = await bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
                     console.log(cvv_check);
                     if (cardnumber_check && cvv_check) {
                         console.log("success!");
@@ -184,7 +184,7 @@ const constructorMethod = app => {
                     error: error
                 });
             }
-           
+
         });
         app.get("/contact", async (req, res) => {
             res.status(200).render("contact/details", {
@@ -211,9 +211,9 @@ const constructorMethod = app => {
                     for (let j = 0; j < rooms.length; j++) {
                         let price_diff_text = "No Additional Cost";
                         if (itrInfoList[i]['hotel']['rooms'][j]['price_diff'] > 0) {
-                            price_diff_text = "+" + itrInfoList[i]['hotel']['rooms'][j]['price_diff'];
+                            price_diff_text = "+" + itrInfoList[i]['hotel']['rooms'][j]['price_diff'] + " will be applied at the hotel during checkout.";
                         }
-                        itrInfoList[i]['hotel']['rooms'][j]["price_diff_text"] = "Price: " + price_diff_text;
+                        itrInfoList[i]['hotel']['rooms'][j]["price_diff_text"] = "Price: " + price_diff_text
                     }
                 }
             }
