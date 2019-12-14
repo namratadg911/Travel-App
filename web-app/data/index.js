@@ -12,29 +12,29 @@ const bcrypt = require("bcryptjs");
 
 async function create()
 {
-   const one = await hpackage1.create(1,"Mini-Package", "3-Day tour", 1500, 1, "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const one = await hpackage1.create(1,"Mini-Package", "3-Day tour", 1500, 1, [1,2,3], "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
    console.log(one);
-   const oneone = await hpackage1.create(2,"Mega-Package", "5-Day tour", 1500,  1, "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const oneone = await hpackage1.create(2,"Mega-Package", "5-Day tour", 1500,  1,[1,2,3,4,5], "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
    console.log(oneone);
-   const two = await hpackage1.create(3,"Mini-Package", "3-Day tour", 2000,  2, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
+   const two = await hpackage1.create(3,"Mini-Package", "3-Day tour", 2000,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
    console.log(two);
-   const twotwo = await hpackage1.create(4,"Mega-Package", "5-Day tour",  2000,  2, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
+   const twotwo = await hpackage1.create(4,"Mega-Package", "5-Day tour",  2000,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC5T4J4RxyRB5X13V4tVi7qThADOocq57hxuzjk9H5dRID44gF&s");
    console.log(twotwo);
-   const three = await hpackage1.create(5,"Mini-Package", "3-Day tour", 18000,  3, "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
+   const three = await hpackage1.create(5,"Mini-Package", "3-Day tour", 18000,  3, [11,12,13],"https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
    console.log(three);
-   const threethree = await hpackage1.create(6,"Mega-Package", "5-Day tour", 18000,  3, "https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
+   const threethree = await hpackage1.create(6,"Mega-Package", "5-Day tour", 18000,  3, [11,12,13,14,15],"https://media.istockphoto.com/photos/kodaikanal-tamil-nadu-the-picturesque-lake-in-the-british-colonial-picture-id492882716?k=6&m=492882716&s=612x612&w=0&h=cswJpnBhroG9Q_6wWsRjXJ1BTfZUqDLROQO5JLDdlSQ=");
    console.log(threethree);
-   const four = await hpackage1.create(7,"Mini-Package", "3-Day tour", 1700,  4, "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
+   const four = await hpackage1.create(7,"Mini-Package", "3-Day tour", 1700,  4, [16,17,18],"https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
    console.log(four);
-   const fourfour = await hpackage1.create(8,"Mega-Package", "5-Day tour", 1700,  4, "https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
+   const fourfour = await hpackage1.create(8,"Mega-Package", "5-Day tour", 1700,  4, [16,17,18,19,20],"https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/ntrstatue_0.jpg?itok=dDCIypLw");
    console.log(fourfour);
-   const five = await hpackage1.create(9,"Mini-Package", "3-Day tour", 1900,  5, "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
+   const five = await hpackage1.create(9,"Mini-Package", "3-Day tour", 1900,  5, [21,22,23],"https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
    console.log(five);
-   const fivefive = await hpackage1.create(10,"Mega-Package", "5-Day tour", 1900, 5, "https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
+   const fivefive = await hpackage1.create(10,"Mega-Package", "5-Day tour", 1900, 5, [21,22,23,24,25],"https://static.toiimg.com/thumb/width-650,height-433,resize-true,resizeMode-5,photoid-66518638.cms");
    console.log(fivefive);
-   const six = await hpackage1.create(11,"Mini-Package", "3-Day tour", 1600, 6, "https://static.toiimg.com/photo/62569054/.jpg");
+   const six = await hpackage1.create(11,"Mini-Package", "3-Day tour", 1600, 6, [26,27,28],"https://static.toiimg.com/photo/62569054/.jpg");
    console.log(six);
-   const sixsix = await hpackage1.create(12,"Mega-Package", "5-Day tour", 1600, 6, "https://static.toiimg.com/photo/62569054/.jpg");
+   const sixsix = await hpackage1.create(12,"Mega-Package", "5-Day tour", 1600, 6, [26,27,28,29,30],"https://static.toiimg.com/photo/62569054/.jpg");
    console.log(sixsix);
 
 
@@ -241,7 +241,7 @@ console.log(thirtyKHotel);
    console.log(wbone);
    const wbtwo = await attraction1.create(49, "Victoria Memorial", 3, "https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2018/04/Victoria-Memorial.jpg");
    console.log(wbtwo);
-   const wbthree = await attraction1.create(50, "Tiger Hill", 4, "http://shahtour.com/blogs/wp-content/uploads/2017/04/How-to-reach-tiger-hill-from-Darjeeling.jpg");
+   const wbthree = await attraction1.create(50, "Tiger Hill", 4,  "http://shahtour.com/blogs/wp-content/uploads/2017/04/How-to-reach-tiger-hill-from-Darjeeling.jpg");
    console.log(wbthree);
    const wbfour = await attraction1.create(51, "Howrah Bridge", 1, "https://images-na.ssl-images-amazon.com/images/I/61V5kdbUUXL.jpg");
    console.log(wbfour);

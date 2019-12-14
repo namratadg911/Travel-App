@@ -38,7 +38,7 @@ module.exports = {
     return packages;
    },
 
-    async create(id,name, description, price, location_id, image)
+    async create(id,name, description, price, location_id, list, image)
     {
         if(!price || !name)
         {
@@ -60,7 +60,7 @@ module.exports = {
                 description: description,
                 price: price,
                 location_id: location_id,
-                list: [],
+                list: list,
                 image: image
             };
             const hpackageCollection = await hpackage();
