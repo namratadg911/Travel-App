@@ -160,20 +160,30 @@ const constructorMethod = app => {
                 if (req.body.name == paymentData[i]['name'] && req.body.expirymonth == paymentData[i]['month'] && req.body.expiryyear == paymentData[i]['year']) {
                     var cardnumber_check = false;
                     var cvv_check = false;
-                    cardnumber_check = bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
-                    cvv_check = bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
+                    cardnumber_check = await bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
+                    console.log(cardnumber_check);
+                    cvv_check =await bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
+                    console.log(cvv_check);
                     if (cardnumber_check && cvv_check) {
                         console.log("success!");
                         c++;
+                        res.status(200).render("booking/confirmation", {
+                            pageTitle: "Booking Confirmation",
+                        });
                     }
                 }
             }
             if (c == 0) {
                 console.log("fail");
+                const error = {
+                    message: "payment failed"
+                };
+                res.status(400).render("error_view/generic_error", {
+                    pageTitle: "Booking Confirmation",
+                    error: error
+                });
             }
-            res.status(200).render("booking/confirmation", {
-                pageTitle: "Booking Confirmation",
-            });
+           
         });
         app.get("/contact", async (req, res) => {
             res.status(200).render("contact/details", {
