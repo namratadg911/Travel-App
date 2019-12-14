@@ -6,12 +6,14 @@
         <div class="col-sm-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">{{name}}</div>
-              <a href="/package-details/{{_id}}">  <div class="panel-body"><img src="{{image}}" class="img-responsive" style="width:100%" alt="Image"></a>
-                </div>
-                <div class="panel-footer">Riverfront Adventure</div>
+                <a href="/location-packages/{{_id}}">
+                    <div class="panel-body"><img src="{{image}}" class="img-responsive" style="width:100%" alt="Image">
+                </a>
             </div>
+            <div class="panel-footer">Riverfront Adventure</div>
         </div>
-        {{/each}}
-    </div><br>
+    </div>
     {{/each}}
+</div><br>
+{{/each}}
 </div><br><br>
