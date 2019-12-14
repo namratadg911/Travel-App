@@ -14,10 +14,15 @@ router.get("/", async (req, res) => {
         bookingHistory[i].booking_date = booking_date;
     }
     const userDetail = {
-        firstName: "Alex",
-        lastName: "James",
-        phoneNo: "5432109876",
-        email: "ajames@gmail.com"
+        firstName: req.body.firstname,
+        lastName: req.body.lastname,
+        phoneNo: req.body.phonenumber,
+        email: req.body.email,
+        state: req.body.state,
+        city: req.body.city,
+        zip: req.body.zip,
+        username:req.body.username,
+        password:req.body.password
     }
     const profile = {
         user: userDetail,

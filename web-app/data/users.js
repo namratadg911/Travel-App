@@ -43,6 +43,7 @@ module.exports = {
             address: address,
             city: city,
             state: state,
+            zip: zip,
             phonenumber: phonenumber
 
         }
