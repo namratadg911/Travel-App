@@ -35,6 +35,17 @@
 
     }
     $(document).ready(function () {
+
+        //on read set the date to current date +1
+        let date = new Date();
+        date.setDate(date.getDate() + 1);
+        let dateString = (date.getMonth() + 1) + "/" + date.getDate() + '/' + date.getFullYear();
+        $("#trip-date").val(dateString);
+        $("#package-selected-form input[name='date_of_trip']").val(dateString);
+        //dispatch Event to update the form
+        //document.getElementById("trip-date").dispatchEvent(new Event("change"));
+
+
         $("#package-selected-form").submit(function () {
             alert("validate and submit form-Submit the form here");
         });
@@ -46,13 +57,7 @@
             let inputElement = $("#trip-date");
             let tripDate = inputElement.val();
             let formElement = $("#package-selected-form input[name='date_of_trip']");
-            if (validDate(tripDate)) {
-                formElement.val(tripDate);
-            } else {
-                formElement.val("");
-                //reset 
-                inputElement.val("");
-            }
+            formElement.val(tripDate);
 
         });
         $("input[name='quantity']").change(function () {

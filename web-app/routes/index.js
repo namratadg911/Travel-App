@@ -142,17 +142,10 @@ const constructorMethod = app => {
                 pageTitle: "User Profile",
             });
         });
-        /* checkout get is only for UI build and testing*/
-        app.get("/checkout", async (req, res) => {
-            res.status(200).render("booking/checkout", {
-                pageTitle: "Checkout"
-            });
-        });
-        app.post("/checkout", async (req, res) => {
-            res.status(200).render("booking/checkout", {
-                pageTitle: "Checkout"
-            });
-        });
+        /*Checkout routes to checkout.js*/
+        app.use("/checkout", require("./checkout"));
+
+
         app.post("/confirmation", async (req, res) => {
             const data = require("../data/payment");
             const paymentData = await data.getall();
