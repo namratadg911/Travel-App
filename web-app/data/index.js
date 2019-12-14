@@ -12,9 +12,9 @@ const bcrypt = require("bcryptjs");
 
 async function create()
 {
-   const one = await hpackage1.create(1,"Mini Package", "Exciting 3 day packages to explore God's own country Kerala! This mix of history and the most beautiful water bodies on earth will mesmerize you.", 1500, 1, [1,2,3], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2CIZ2BWJj6gAwCzVcHSqv84dDsinVsIZ07_CnYRY-_XFp0q-fQ&s");
+   const one = await hpackage1.create(1,"Mini Package", "Exciting 3 day packages to explore God's own country Kerala! This mix of history and the most beautiful water bodies on earth will mesmerize you.", 1500, 1, [1,2,3], "https://seoimgak.mmtcdn.com/blog/sites/default/files/styles/mobile_cover_images/public/north-kerala-best-tourism-destinations.jpg?itok=l8zO5_pU");
    console.log(one);
-   const oneone = await hpackage1.create(2,"Mega Package","Explore Backwaters, waterfall, enjoy beaches and be a King or Queen on our 5 days package to Kerala!", 2000,  1,[1,2,3,4,5], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KF5qdNqs1drhB9UARW8cOrIFo-5MPiWoI0NjqE6eKZrrtfo_2Q&s");
+   const oneone = await hpackage1.create(2,"Mega Package","Explore Backwaters, waterfall, enjoy beaches and be a King or Queen on our 5 days package to Kerala!", 2000,  1,[1,2,3,4,5], "http://www.travelsiteindia.com/blog/wp-content/uploads/2017/09/kerala-backwater.jpg");
    console.log(oneone);
    const two = await hpackage1.create(3,"Mini Package", "One of the most pristine places on Earth, enjoy our 3 day packages in the lap of the Himalayas and get closer to nature!", 1400,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
    console.log(two);
@@ -132,13 +132,13 @@ const thirtyKHotel = await hotels.create(30, "Hotel Mainak", "https://encrypted-
 console.log(thirtyKHotel);
 
 //Kerala
-   const kone = await attraction1.create(1, "Museum", 1, "https://en.wikipedia.org/wiki/Kerala_Museum#/media/File:Museum_of_Kerala_History.jpg");
+   const kone = await attraction1.create(1, "Museum", 1, "https://c1.hiqcdn.com/customcdn/720x512/images/attractions/Museum_of_Kerala_History_1270.jpg");
    console.log(kone);
-   const ktwo = await attraction1.create(2, "BackWater", 3, "https://www.indiaholidayarchitects.com/wp-content/uploads/2014/12/Palm-tree-tropical-forest-in-backwater-of-Kochin-Kerala-India-copy-1024x550.jpg");
+   const ktwo = await attraction1.create(2, "Backwater", 3, "https://upload.wikimedia.org/wikipedia/commons/2/27/Houseboats_at_Kerala_Backwaters.jpg");
    console.log(ktwo);
-   const kthree = await attraction1.create(3, "Thekkady Safari", 5, "https://www.holidify.com/places/thekkady/");
+   const kthree = await attraction1.create(3, "Thekkady Safari", 5, "https://edge.ixigo.com/ixi-api/img/5212488565cd3b9a71000001_600x315.jpg");
    console.log(kthree);
-   const kfour = await attraction1.create(4, "National Park", 4, "https://lh3.googleusercontent.com/proxy/M6zEpWHzLc5n_W0O8F6IW0s6bAcb9qkQRkWinR-k4Z71kiVSxeWu406h0GkLC5p6ONdS0_IcvtDyRNmEGx9BWnvZ-sAWHEbYBGYKYh87-D6B049N8RFs_3BpVsTZUQnACp5X2wSUwkXgtngYublv71t63p8=w464-h260-n-k-no");
+   const kfour = await attraction1.create(4, "National Park", 4, "http://www.keralataxis.com/wp-content/uploads/2015/07/Parambikulam-National-park..jpg");
    console.log(kfour);
    const kfive = await attraction1.create(5, "Water Falls", 2, "https://cdn.photographylife.com/wp-content/uploads/2015/06/AJT_8848-Edit-650x293.jpg");
    console.log(kfive);
