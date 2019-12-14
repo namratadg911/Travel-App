@@ -55,15 +55,6 @@ module.exports = {
         return user1;
   },
 
-    async getAll(){
-        
-        const userCollection = await user();
-
-        const user3 = await userCollection.find({}).toArray();
-
-        return user3;
-        },
-
     async updateUser(id, updatedUser) {
     
         const userCollection = await user();
