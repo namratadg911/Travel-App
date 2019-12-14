@@ -16,25 +16,25 @@ async function create()
    console.log(one);
    const oneone = await hpackage1.create(2,"Mega Package","Explore Backwaters, waterfall, enjoy beaches and be a King or Queen on our 5 days package to Kerala!", 2000,  1,[1,2,3,4,5], "http://www.travelsiteindia.com/blog/wp-content/uploads/2017/09/kerala-backwater.jpg");
    console.log(oneone);
-   const two = await hpackage1.create(3,"Mini Package", "One of the most pristine places on Earth, enjoy our 3 day packages in the lap of the Himalayas and get closer to nature!", 1400,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
+   const two = await hpackage1.create(3,"Mini Package", "One of the most pristine places on Earth, enjoy our 3 day packages in the lap of the Himalayas and get closer to nature!", 1400,  2, [6,7,8],"https://2.bp.blogspot.com/-99yaelDxa6E/T0y79bCXjSI/AAAAAAAAOYY/xpup0G77X5g/s1600/Himalayas+1.jpg");
    console.log(two);
-   const twotwo = await hpackage1.create(4,"Mega Package", "Want to trek to the places most mentioned in the Indian Mythology and get a better insight to the stories? Book our 5 day package to Himalayas and get exploring!",  1900,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFawcukP8mv8TT41QkRTJULq4k31XXZJOWl47vrnHniz0uN71scg&s");
+   const twotwo = await hpackage1.create(4,"Mega Package", "Want to trek to the places most mentioned in the Indian Mythology and get a better insight to the stories? Book our 5 day package to Himalayas and get exploring!",  1900,  2, [6,7,8,9,10],"http://www.gundrukpost.com/wp-content/uploads/2014/12/NepaLmaxresdefault.jpg");
    console.log(twotwo);
-   const three = await hpackage1.create(5,"Mini Package", "The state that is home to a number of historic buildings, multi-religious pilgrimage sites, hill stations and World Heritage sites, come and explore these places in our very own Tamil Nadu for 3 days!", 16000,  3, [11,12,13],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtLSKszSougDZJcuyVEnzpgwEhWu2iU7JUqiTpVJCtC1-Rib_Bg&s");
+   const three = await hpackage1.create(5,"Mini Package", "The state that is home to a number of historic buildings, multi-religious pilgrimage sites, hill stations and World Heritage sites, come and explore these places in our very own Tamil Nadu for 3 days!", 16000,  3, [11,12,13],"http://www.sankarayatra.com/travelogue/wp-content/uploads/2016/09/Kanyakumari-Tamil-Nadu.jpg");
    console.log(three);
-   const threethree = await hpackage1.create(6,"Mega Package", "Explore the culture, cuisine and architecture shaped by the most powerful empires, book our 5 day package to Tamil nadu to immerse in history and beauty.", 2100,  3, [11,12,13,14,15],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const threethree = await hpackage1.create(6,"Mega Package", "Explore the culture, cuisine and architecture shaped by the most powerful empires, book our 5 day package to Tamil nadu to immerse in history and beauty.", 2100,  3, [11,12,13,14,15],"https://www.blacktomato.com/wp-content/uploads/2015/02/Tamil-Nadu.jpg");
    console.log(threethree);
-   const four = await hpackage1.create(7,"Mini Package", "Visit the most-visited state in 3 days and get to know what Andhra Pradesh is all about!", 1700,  4, [16,17,18],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qcQjmUloCvrZA8gy4Py_4mg89Ka01a-qcd_K7xIiI7WSY6HHSA&s");
+   const four = await hpackage1.create(7,"Mini Package", "Visit the most-visited state in 3 days and get to know what Andhra Pradesh is all about!", 1700,  4, [16,17,18],"http://famousdestinations.in/wp-content/uploads/2016/02/Andhra-Pradesh-3.jpg");
    console.log(four);
-   const fourfour = await hpackage1.create(8,"Mega Package", "Explore the temples and valleys in Andhra Pradesh in a 5 day tour and be a part of the culture.", 2200,  4, [16,17,18,19,20],"https://cdn.britannica.com/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg");
+   const fourfour = await hpackage1.create(8,"Mega Package", "Explore the temples and valleys in Andhra Pradesh in a 5 day tour and be a part of the culture.", 2200,  4, [16,17,18,19,20],"http://famousplacesinindia.in/Forts/Images/Gandikota-Fort/Gandikota-Fort-1.jpg");
    console.log(fourfour);
-   const five = await hpackage1.create(9,"Mini Package", "Be a punjabi for 3 days and get to know what they are made of in Punjab!", 1300,  5, [21,22,23],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const five = await hpackage1.create(9,"Mini Package", "Be a punjabi for 3 days and get to know what they are made of in Punjab!", 1300,  5, [21,22,23],"https://s3.scoopwhoop.com/ish/Punjab/10.jpg");
    console.log(five);
-   const fivefive = await hpackage1.create(10,"Mega Package", "The 5 day tour will give you the visual experience of what role Punjab has in the making of today's India", 1800, 5, [21,22,23,24,25],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjLM8Z0PA9tIsYY-FxA539_2UBe89MwyDcRLQutl_mQdBu_sO&s");
+   const fivefive = await hpackage1.create(10,"Mega Package", "The 5 day tour will give you the visual experience of what role Punjab has in the making of today's India", 1800, 5, [21,22,23,24,25],"https://img.ev.mu/images/regions/116/1605x642/116.jpg");
    console.log(fivefive);
-   const six = await hpackage1.create(11,"Mini Package", "A state that defines beauty and literature, come and visit West Bengal for a 3 day tour and find peace", 2000, 6, [26,27,28],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NaHVTHYEtCNdJNeLQf0_wU6F8HFqqQArzXh7ZEYAsbYgjdrP5g&s");
+   const six = await hpackage1.create(11,"Mini Package", "A state that defines beauty and literature, come and visit West Bengal for a 3 day tour and find peace", 2000, 6, [26,27,28],"http://4.bp.blogspot.com/-ixKuMhL4Lag/UiGAjk2namI/AAAAAAAAbSA/ciI3JVlRK18/s1600/tumblr_m8vqrtiBP51qlobzqo1_r1_1280.jpg");
    console.log(six);
-   const sixsix = await hpackage1.create(12,"Mega Package", "5 day tour to West Bengal, enjoy with the Tigers! ", 2500, 6, [26,27,28,29,30],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSdUZ8MF5EzNFFJJb7nB1UqWzXVDAiiCPN28QDnb76Rr2lLVfqw&s");
+   const sixsix = await hpackage1.create(12,"Mega Package", "5 day tour to West Bengal, enjoy with the Tigers! ", 2500, 6, [26,27,28,29,30],"http://www.transindiatravels.com/wp-content/uploads/malda-1.jpg");
    console.log(sixsix);
 
 
@@ -56,79 +56,79 @@ async function create()
 
 const oneKHotel = await hotels.create(1, "Thekkady house", "https://r1imghtlak.mmtcdn.com/031f11d4f48d11e7a9bf025f77df004f.jpg?&output-quality=75&downsize=520:*&crop=520:350;0,20&output-format=jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(oneKHotel);
-const twoKHotel = await hotels.create( 2, "Hotel Vembanad",  "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/96/06/960643_v1.jpeg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+const twoKHotel = await hotels.create( 2, "Vembanad",  "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/96/06/960643_v1.jpeg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(twoKHotel);
 const threeKHotel = await hotels.create(3, "Kochi Palace", "https://media-cdn.tripadvisor.com/media/photo-w/0f/dc/52/10/brunton-boatyard-in-fort.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(threeKHotel);
-const fourKHotel = await hotels.create( 4, "Hotel Periyar",  "https://www.thehotelguru.com/_images/61/a5/61a5ab42af200f4a73118c590d842011/600x422.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+const fourKHotel = await hotels.create( 4, "Periyar",  "https://www.thehotelguru.com/_images/61/a5/61a5ab42af200f4a73118c590d842011/600x422.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(fourKHotel);
-const fiveKHotel = await hotels.create(5, "Hotel Beach View", "https://www.keralatourism.org/images/enchanting_kerala/large/state_tourism_award_winners_2014_1520170427151956_640_1.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const fiveKHotel = await hotels.create(5, "Beach View", "https://www.keralatourism.org/images/enchanting_kerala/large/state_tourism_award_winners_2014_1520170427151956_640_1.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(fiveKHotel);
 
 
 //Himalaya Hotels
 
-const sixKHotel = await hotels.create(6, "Hotel Yak & Yeti", "https://pix6.agoda.net/hotelImages/290/290041/290041_14030513270018558804.jpg?s=1024x768",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+const sixKHotel = await hotels.create(6, "Yak & Yeti", "https://pix6.agoda.net/hotelImages/290/290041/290041_14030513270018558804.jpg?s=1024x768",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(sixKHotel);
-const sevenKHotel = await hotels.create( 7, "Hotel Mount Kailash",  "https://g5.globimmo.net/img.php?src=server3/a/4/1/7/c/c266722bfcdf9a9afc3d0fb690a9daa5b95768e6d2e0a8d1a3c4ae8a5cc.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+const sevenKHotel = await hotels.create( 7, "Mount Kailash",  "https://g5.globimmo.net/img.php?src=server3/a/4/1/7/c/c266722bfcdf9a9afc3d0fb690a9daa5b95768e6d2e0a8d1a3c4ae8a5cc.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(sevenKHotel);
-const eightKHotel = await hotels.create(8, "Hotel Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+const eightKHotel = await hotels.create(8, "Pashupatinath", "https://images.trvl-media.com/hotels/37000000/36700000/36696600/36696517/3b821e03_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(eightKHotel);
 const nineKHotel = await hotels.create( 9, "Hyatt Regency",  "https://images.trvl-media.com/hotels/1000000/540000/531200/531192/50845c8f_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(nineKHotel);
-const tenKHotel = await hotels.create(10, "Hotel Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const tenKHotel = await hotels.create(10, "Shiv", "https://images.trvl-media.com/hotels/6000000/5860000/5857500/5857498/d480e7c5_z.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(tenKHotel);
 
 //Tamil Nadu Hotels
 
-const elevenKHotel = await hotels.create(11, "Visalam Hotel", "http://d3e7bfg0h5jt4g.mrandmrssmith.com/images/listing_gallery_carousel_466/223769-visalam-tamil-nadu-india.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+const elevenKHotel = await hotels.create(11, "Visalam", "http://d3e7bfg0h5jt4g.mrandmrssmith.com/images/listing_gallery_carousel_466/223769-visalam-tamil-nadu-india.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(elevenKHotel);
 const twelveKHotel = await hotels.create( 12, "ITC Grand Chola",  "https://hi-cdn.t-rp.co.uk/images/hotels/3452704/59?width=870&height=480&crop=false", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(twelveKHotel);
-const thirteenKHotel = await hotels.create(13, "Hotel Radisson Blu", "https://r-cf.bstatic.com/images/hotel/max1024x768/339/33960936.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+const thirteenKHotel = await hotels.create(13, "Radisson Blu", "https://r-cf.bstatic.com/images/hotel/max1024x768/339/33960936.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(thirteenKHotel);
 const onefourKHotel = await hotels.create( 14, "Sheraton",  "http://www.hotelstamilnadu.com/chennaihotels/chola/gif/hotel12.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(onefourKHotel);
-const onefiveKHotel = await hotels.create(15, "Resort Sullivan Court", "https://www.holidaysat.com/gallery/Fortune-Resort-Sullivan-Court-Ooty-00.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const onefiveKHotel = await hotels.create(15, "Sullivan Court", "https://www.holidaysat.com/gallery/Fortune-Resort-Sullivan-Court-Ooty-00.jpg",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(onefiveKHotel);
 
 //Andhra Pradesh Hotels
 
 const onesixKHotel = await hotels.create(16, "Taj Residency", "http://www.fhotels.net/Admin/PHOTOS/Hotels/3036/3036_1_18.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(onesixKHotel);
-const onesevenKHotel = await hotels.create( 17, "Hotel Novotel",  "http://resortsindia.ca/images/top.png", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+const onesevenKHotel = await hotels.create( 17, "Novotel",  "http://resortsindia.ca/images/top.png", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(onesevenKHotel);
 const oneeightKHotel = await hotels.create(18, "Four points by Sheraton", "https://cache.marriott.com/marriottassets/marriott/VTZFP/vtzfp-facade-4513-hor-feat.jpg?interpolation=progressive-bilinear&downsize=1180px:*",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(oneeightKHotel);
-const onenineKHotel = await hotels.create( 19, "Marasa Sarovar",  "https://media.expedia.com/hotels/10000000/9810000/9807300/9807212/9807212_24_z.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+const onenineKHotel = await hotels.create( 19, "Marasa Sarovar",  "https://www.hotelsinthekkady.net/logos/periyar_meadows_hotel.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(onenineKHotel);
-const twentyKHotel = await hotels.create(20, "Hotel Sai Priya", "https://q-xx.bstatic.com/xdata/images/hotel/max500/165162402.jpg?k=49934b7f27d820374140cc76ece72f14a2d8e49473f5e7bd474f59f00bfbb5c1&o=",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const twentyKHotel = await hotels.create(20, "Sai Priya", "https://q-xx.bstatic.com/xdata/images/hotel/max500/165162402.jpg?k=49934b7f27d820374140cc76ece72f14a2d8e49473f5e7bd474f59f00bfbb5c1&o=",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(twentyKHotel);
 
 //Punjab Hotels
 
 const twooneKHotel = await hotels.create(21, "Cabana Orchid", "https://www.t2india.com/Images/Places/JUC/associates/A2850_1.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(twooneKHotel);
-const twotwoKHotel = await hotels.create( 22, "Svaasa Hotel",  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToj0j42A_utP0pNY2A7rjPNbS_SvFN1lay4AFKz5-CTGJZfG7C&s", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+const twotwoKHotel = await hotels.create( 22, "Svaasa",  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToj0j42A_utP0pNY2A7rjPNbS_SvFN1lay4AFKz5-CTGJZfG7C&s", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(twotwoKHotel);
 const twothreeKHotel = await hotels.create(23, "Radisson Blu", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUEoJW1bDu8QfrknSdeYgB4_FNPCH1lY7DPpPdwL1aJ9Wd7L5aw&s",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(twothreeKHotel);
 const twofourKHotel = await hotels.create( 24, "Oberoi Sukhvilas",  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcNyu5eglSSkg0WIgyYCMJxvToTLXKhZ2jOSQp2yUf3g6-8hVbRQ&s",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(twofourKHotel);
-const twofiveKHotel = await hotels.create(25, "Luxury Hotel", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElVYHxTb0tIco55QV3yJTk7C02GaK90aQdyCj6UvUlDemxrgmaA&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const twofiveKHotel = await hotels.create(25, "Luxury", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElVYHxTb0tIco55QV3yJTk7C02GaK90aQdyCj6UvUlDemxrgmaA&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(twofiveKHotel);
 
 //West Bengal Hotels
 
-const twosixKHotel = await hotels.create(26, "Hotel Anaya Kutir", "https://media.cntraveller.in/wp-content/uploads/2014/12/Anaya-Kutir-866x487.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
+const twosixKHotel = await hotels.create(26, "Anaya Kutir", "https://media.cntraveller.in/wp-content/uploads/2014/12/Anaya-Kutir-866x487.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 150.00}], "4.2");
 console.log(twosixKHotel);
-const twosevenKHotel = await hotels.create( 27, "Hotel Raichak",  "https://i.pinimg.com/originals/80/32/65/803265c507af39e00192dd1a63c2c894.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
+const twosevenKHotel = await hotels.create( 27, "Raichak",  "https://i.pinimg.com/originals/80/32/65/803265c507af39e00192dd1a63c2c894.jpg", [{type:"Single", price_diff:0},{type:"Double",price_diff: 200.00}], "3.9");
 console.log(twosevenKHotel);
-const twoeightKHotel = await hotels.create(28, "Hotel Siliguri", "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/99/51/99510_v4.jpeg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
+const twoeightKHotel = await hotels.create(28, "Siliguri", "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/99/51/99510_v4.jpeg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}],"4.4");
 console.log(twoeightKHotel);
-const twonineKHotel = await hotels.create( 29, "The Oberoi Hotels",  "https://indialuxurytrip.files.wordpress.com/2013/09/the-oberoi-amarvilas.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
+const twonineKHotel = await hotels.create( 29, "The Oberoi",  "https://indialuxurytrip.files.wordpress.com/2013/09/the-oberoi-amarvilas.jpg",[{type:"Queen", price_diff:0},{type:"King",price_diff: 200.00}], "4.5");
 console.log(twonineKHotel);
-const thirtyKHotel = await hotels.create(30, "Hotel Mainak", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a2gwhv12Bv9z7d_36Z-5uBNXVjRFvfxEsQn0SR1bBFbPhH-t&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
+const thirtyKHotel = await hotels.create(30, "Mainak", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a2gwhv12Bv9z7d_36Z-5uBNXVjRFvfxEsQn0SR1bBFbPhH-t&s",[{type:"Single", price_diff:0},{type:"Double",price_diff: 150.00}],"3.8");
 console.log(thirtyKHotel);
 
 //Kerala
@@ -164,7 +164,7 @@ console.log(thirtyKHotel);
    console.log(hfour);
    const hfive = await attraction1.create(15, "Kathmandu Durbar Square ", 3, "https://www.betterplacestravel.com/wp-content/uploads/2017/03/Nepal-Kathmandu-Durbar-square-2w.jpg");
    console.log(hfive);
-   const hsix = await attraction1.create(16, "Trekking", 6, "https://www.adventuregreathimalaya.com/wp-content/uploads/2016/07/manaslu12.jpg");
+   const hsix = await attraction1.create(16, "Trekking", 6, "http://www.destination360.com/asia/china/images/s/himalayas-mountains.jpg");
    console.log(hsix);
    const hseven = await attraction1.create(17, "Kathmandu Valley", 3, "https://cdn.britannica.com/s:700x500/48/10548-004-B1063E67/Kathmandu-Nepal-Valley-background-Bairavkund-Range.jpg");
    console.log(hseven);
@@ -176,7 +176,7 @@ console.log(thirtyKHotel);
    console.log(hten);
 
 //Tamil Nadu
-   const tone = await attraction1.create(21, "Meenakshi Temple", 2, "https://lh4.googleusercontent.com/proxy/vfwneme5ew6St9-O0NceqKmO_9zucfVxj2ZwX6cH6cbZck8Eg1Z5KMNoZZfmTBddCV0HzHFesNFc1n_Aknlr1Pg3StiZcqb0OHkqo7uLKt-GN8PTQjwyrMpg3dq0DdJbCUgrF0sFnAr5rfEnwfN37N8SAOA=w580-h325-n-k-no");
+   const tone = await attraction1.create(21, "Meenakshi Temple", 2, "https://i.pinimg.com/originals/21/fb/e5/21fbe56ef475218d39a926261db46841.jpg");
    console.log(tone);
    const ttwo = await attraction1.create(22, "Shore Temple", 2, "https://www.wondermondo.com/wp-content/uploads/2019/02/Chennai_Beach_temple_942115928.jpg");
    console.log(ttwo);
@@ -199,9 +199,9 @@ console.log(thirtyKHotel);
 
 //Andhra Pradesh
 
-   const anone = await attraction1.create(31, "Tirupathi", 7, "https://lh3.googleusercontent.com/proxy/viO5SQyjoo32XqnSrcDFL9-To3Ncu2x8UaY5mSqoxSqAFsOVgy3vl8U8b5c1xZ7KHx9-C5CEqOdIApnLCMEd0VTrtqIelZoIp73uNtMQi_6ywSchcEKmCR7iAWnfDusU_RQ3YzGaUXhNB4XMItiuOifPU8k=w336-h190-n-k-no");
+   const anone = await attraction1.create(31, "Tirupathi", 7, "https://www.thehansindia.com/assets/6115_Tirumala-Tirupati-Devasthan.jpg");
    console.log(anone);
-   const antwo = await attraction1.create(32, "Araku Valley", 3, "https://lh4.googleusercontent.com/proxy/kZ7OudtC_uc-J1D7tmigrRYDkfjuExtgEIltg0NijkvJ5rW0ydvD-_KB88SYO7Ulp1RNuhzg68dtWudxH7_zmI0yBWzNuvOPqGP9qpRgDjQSODPW5i8uwT1_yobCiPN05JYgcadIpP6c7kbXorONT11dSco=w357-h238-k-no");
+   const antwo = await attraction1.create(32, "Araku Valley", 3, "http://4.bp.blogspot.com/-SPekZbwI25U/U9C0vb3AvFI/AAAAAAAAFNo/sCPdcT3wbag/s1600/29MP_ARAKU_VALLEY_372897g.jpg");
    console.log(antwo);
    const anthree = await attraction1.create(33, "Borra Caves", 4, "https://lh5.googleusercontent.com/-wCS0nZblX9M/WWr8U0r66vI/AAAAAAABQ38/PyxjNFoYGmcKm9KryzwWi0dAEKHicGuigCLIBGAYYCw/w317-h238-k-no/");
    console.log(anthree);
@@ -211,7 +211,7 @@ console.log(thirtyKHotel);
    console.log(anfive);
    const ansix = await attraction1.create(36, "Nagarjunsagar-Srisailam Tiger Reserve", 5, "https://lh4.googleusercontent.com/-gf_lZsnhUKI/XNpXiEAqf5I/AAAAAAAARKg/UVSFkfePRKsx4cAoMa_ynHPx2tWG7F17QCLIBGAYYCw/w317-h238-k-no/");
    console.log(ansix);
-   const anseven = await attraction1.create(37, "Kondapalli", 2, "https://lh4.googleusercontent.com/proxy/sWRUtWfs3A9i0T_jJlzKyd1q0HzJl4gX5Y_a0pN71O1Zq5_P6-6TWAiDodYNUNFAq5Q6w5PXkQ32D9GfBDjzutUt8oJjyeDrh7t7NOYuhLA-yOb7EON1R-g3sxk9HrTIAlVU83HAJyBZTb3PWN700SUJHV8=w423-h238-k-no");
+   const anseven = await attraction1.create(37, "Kondapalli Fort", 2, "http://3.bp.blogspot.com/-6HOg7hMXWz8/TZnxAXVFjtI/AAAAAAAAA-0/s8LAqWzpc_I/s1600/Picture7.jpg");
    console.log(anseven);
    const aneight = await attraction1.create(38, "Tadipatri", 2, "https://lh6.googleusercontent.com/-suyuk0ywEGQ/XWFrh9KItBI/AAAAAAAA3Vw/I7aBxAW5vFQIAw5zTBzuj8zs7hZHigPjwCLIBGAYYCw/w179-h238-k-no/");
    console.log(aneight);
@@ -231,13 +231,13 @@ console.log(thirtyKHotel);
    console.log(pfour);
    const pfive = await attraction1.create(45, "Jagraon", 3, "https://lh3.googleusercontent.com/-BcoX5aeSuqU/Wj6W5Hpd6dI/AAAAAAAAJD4/49ij1ymEkToksy4Q4thacucTbUR7JpDrgCLIBGAYYCw/w423-h238-k-no/");
    console.log(pfive);
-   const psix = await attraction1.create(46, "Malerkotla", 5, "https://lh3.googleusercontent.com/proxy/HxJcaAx4_PYGpwh_M0hcRkb3-WwUWp6MCPSFtEboc7NicwpBfEhVMusLUfUqbBD98p5Vz8ejcHUuQFwaAMSB5VV_ipOSndOFtLfywNhOyueCbrs3eupDWbLYMUp7C3s01ofgKHAfD9aTxRBueh6456zV9TQ=w358-h238-k-no");
+   const psix = await attraction1.create(46, "Malerkotla", 5, "http://2.bp.blogspot.com/__DPz0Z19Wv4/Sw1Jp3Bn13I/AAAAAAAAAJc/hmINASldgWM/s1600/eid01.jpg");
    console.log(psix);
    const pseven = await attraction1.create(47, "Kartarpur", 4, "https://lh3.googleusercontent.com/-wc97NNtU45s/XXS1RsLMo0I/AAAAAAAApKM/XZ5L0wndcZMNSAg3d-1AAy8wJjCc1-RWgCLIBGAYYCw/w317-h238-k-no/");
    console.log(pseven);
    
 //West Bengal
-   const wbone = await attraction1.create(48, "Sundarban National Park", 5, "https://ihpl.b-cdn.net/pictures/wildlife/parks/sunderbans-55.jpeg");
+   const wbone = await attraction1.create(48, "Sundarban National Park", 5, "https://www.smashinglists.com/wp-content/uploads/2010/01/8.-Bengal-Tiger-1024x768.jpg");
    console.log(wbone);
    const wbtwo = await attraction1.create(49, "Victoria Memorial", 3, "https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2018/04/Victoria-Memorial.jpg");
    console.log(wbtwo);
