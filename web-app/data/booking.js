@@ -34,7 +34,7 @@ module.exports = {
             total_price: bookingDetails.total_price,
             currency: bookingDetails.currency,
             total_people: bookingDetails.num_of_people,
-            booking_date: bookingDetails.date_of_trip,
+            booking_date: new Date(bookingDetails.date_of_trip),
             status: "pending"
         };
         const bookingCollection = await booking();
