@@ -37,6 +37,20 @@ module.exports = {
         const booking1 = await bookingCollection.find({}).toArray();
         return booking1;
     },
+    async updateBookingStatus(bookingId, status) {
+        const bookingObj = await this.getbookingById(bookingId);
+        bookingObj.status = status;
+        const bookingCollection = await booking();
+        const updateInfo = await bookingCollection.replaceOne({
+                _id: bookingObj._id
+            },
+            bookingObj
+        );
+        if (updateInfo.modifiedCount === 0) {
+            throw `Could not update the booking with id ${id} with status ${status} successfully`;
+        }
+        return updateInfo.ops[0];
+    },
     async createBooking(bookingDetails) {
         let newbooking = {
             user_id: bookingDetails.user_id,

@@ -29,6 +29,25 @@ router.get("/", async (req, res) => {
     });
 
 });
+router.post("/cancel-booking/:id", async (req, res) => {
+    let bookingId = req.params.id;
+    console.log(bookingId);
+    const bookingData = require("../data/booking");
+
+    try {
+        const booking = await bookingData.updateBookingStatus(bookingId, "canceled");
+        res.status(200).json({
+            status: "success",
+            bookingObj: booking
+        });
+    } catch (e) {
+        res.status(200).json({
+            status: "fail",
+        });
+    }
+
+
+});
 
 
 module.exports = router;

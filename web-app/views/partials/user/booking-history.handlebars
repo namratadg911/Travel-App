@@ -20,8 +20,10 @@
                     <tr>
                         <td>{{package_name}}</td>
                         <td>{{booking_date}}</td>
-                        <td class="text-uppercase">{{status}}</td>
-                        <td><button id="cancle-booking-button" type="button" class="btn btn-primary">Cancle Now</button>
+                        <td id="status_{{_id}}" class="text-uppercase">{{status}}</td>
+                        <td><button id="cancle_booking_button_{{_id}}" name="cancle_booking_button" type="button"
+                                class="btn btn-primary">Cancle
+                                Now</button>
                         </td>
                     </tr>
                     {{/profile.bookingHistory}}
@@ -32,3 +34,25 @@
 
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $("button[name='cancle_booking_button']").click(function (event) {
+            let targetId = event.target.id;
+            let bookingId = targetId.split("_")[3];
+            $.post(
+                {
+                    url: "cancel-booking/" + bookingId,
+                    success: function (result) {
+                        const res = result;
+                        $("#status_" + bookingId).text(res.bookingObj.status);
+                        $("#" + event.target.id).hide();
+                    },
+                    error: function (xhr, status, errorString) {
+                        console.log("error!!");
+                    }
+                });
+
+        });
+    });
+</script>
