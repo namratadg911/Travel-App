@@ -155,9 +155,7 @@ const constructorMethod = app => {
                     var cardnumber_check = false;
                     var cvv_check = false;
                     cardnumber_check = await bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
-                    console.log(cardnumber_check);
                     cvv_check = await bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
-                    console.log(cvv_check);
                     if (cardnumber_check && cvv_check) {
                         console.log("success!");
                         c++;
