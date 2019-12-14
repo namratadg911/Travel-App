@@ -218,10 +218,11 @@ const constructorMethod = app => {
                 }
             }
             const package = {
+                id: packageDetails['_id'],
                 name: packageDetails['name'],
                 description: packageDetails['description'],
                 price: packageDetails['price'],
-                itinerary: itrInfoList
+                itinerary: itrInfoList,
             };
 
 

@@ -1,12 +1,39 @@
 <form id="package-selected-form" name="package-selected-form" method="POST" action="/checkout">
-    <input type="hidden" name="package_id" value="1" />
-    <input type="hidden" name="num_of_people" value="2" />
-    <input type="hidden" name="date_of_trip" value="12/14/2019" />
-    <input type="hidden" name="total_price" value="1500" />
+    <input type="hidden" name="package_id" value="{{package.id}}" />
+    <input type="hidden" name="num_of_people" value="1" />
+    <input type="hidden" name="date_of_trip" value="" />
+    <input type="hidden" name="unit_price" value="{{package.price}}" />
+    <input type="hidden" name="total_price" value="{{package.price}}" />
     <input type="hidden" name="sltd_itr_hotel_room_types" value="" />
 </form>
 <script>
+    function updatePrice() {
+        let numPeople = $("#package-selected-form input[name='num_of_people']").val();
+        let unitPrice = $("#package-selected-form input[name='unit_price']").val();
+        let totalPrice = numPeople * unitPrice;
+        //update form and UI
+        $("#package-selected-form input[name='total_price']").val(totalPrice);
+        $("#display_price").text(totalPrice);
+    }
+    function validDate(date) {
+        if (date.trim() === '') {
+            return false;
+        }
+        return true;
 
+    }
+    function validQuantity(quantity) {
+        try {
+            if (parseInt(quantity) > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+
+    }
     $(document).ready(function () {
         $("#package-selected-form").submit(function () {
             alert("validate and submit form-Submit the form here");
@@ -14,6 +41,33 @@
         $("#book_online").click(function () {
             alert("clicked book!!- Validate here");
             $("#package-selected-form").submit();
+        });
+        $("#trip-date").change(function () {
+            let inputElement = $("#trip-date");
+            let tripDate = inputElement.val();
+            let formElement = $("#package-selected-form input[name='date_of_trip']");
+            if (validDate(tripDate)) {
+                formElement.val(tripDate);
+            } else {
+                formElement.val("");
+                //reset 
+                inputElement.val("");
+            }
+
+        });
+        $("input[name='quantity']").change(function () {
+            let inputElement = $("input[name='quantity']");
+            let quantity = inputElement.val();
+            let formElement = $("#package-selected-form input[name='num_of_people']");
+            if (validQuantity(quantity)) {
+                formElement.val(quantity);
+            } else {
+                formElement.val(1);
+                //reset input element
+                inputElement.val(1);
+            }
+
+            updatePrice();
         });
     });
 

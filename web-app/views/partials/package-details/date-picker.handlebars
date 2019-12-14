@@ -1,8 +1,9 @@
 <label for="trip-date">Trip Date:</label>
-<input id="trip-date" />
+<input id="trip-date" name="trip-date" value="" readonly />
 <br>
 <script>
     $('#trip-date').datepicker({
-        uiLibrary: 'bootstrap'
+        uiLibrary: 'bootstrap',
+        minDate: new Date()
     });
 </script>

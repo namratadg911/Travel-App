@@ -2,7 +2,7 @@
     <div class="conatiner-fluid  text-left">
         <div class="row">
             <div class="col-sm-12">
-                <label>Price: ${{package.price}}</label>
+                <label>Price:$<span id="display_price">{{package.price}}</span></label>
             </div>
         </div>
         <div class="row">
@@ -16,14 +16,14 @@
                 <div class="input-group">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quantity"
-                            onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()">
+                            onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown();this.parentNode.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'));">
                             <span class="glyphicon glyphicon-minus"></span>
                         </button>
                     </span>
                     <input type="number" name="quantity" class="form-control input-number" value="1" min="1">
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quantity"
-                            onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()">
+                            onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp();this.parentNode.parentNode.querySelector('input[type=number]').dispatchEvent(new Event('change'));">
                             <span class="glyphicon glyphicon-plus"></span>
                         </button>
                     </span>
