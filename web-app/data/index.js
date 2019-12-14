@@ -12,7 +12,7 @@ const bcrypt = require("bcryptjs");
 
 async function create()
 {
-   const one = await hpackage1.create(1,"Mini-Package", "3-Day tour", 1500, 1, [1,2,3], "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
+   const one = await hpackage1.create(1,"Mini-Package", "3-Day tour", 1500, 1, [1,2,3], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2CIZ2BWJj6gAwCzVcHSqv84dDsinVsIZ07_CnYRY-_XFp0q-fQ&s");
    console.log(one);
    const oneone = await hpackage1.create(2,"Mega-Package", "5-Day tour", 1500,  1,[1,2,3,4,5], "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201701/kstory_647_010317124538.jpg");
    console.log(oneone);
