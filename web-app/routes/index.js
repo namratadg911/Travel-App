@@ -159,9 +159,13 @@ const constructorMethod = app => {
                     if (cardnumber_check && cvv_check) {
                         console.log("success!");
                         c++;
+                        const bookingId = {
+                            id: booking_id
+                        };
                         await data1.updateBookingStatus(booking_id,"booked");
                         res.status(200).render("booking/confirmation", {
                             pageTitle: "Booking Confirmation",
+                            bookingId: bookingId
                         });
                     }
                 }
