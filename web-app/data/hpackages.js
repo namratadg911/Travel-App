@@ -60,7 +60,7 @@ module.exports = {
                 description: description,
                 price: price,
                 location_id: location_id,
-                list: list,
+                itineraries: list,
                 image: image
             };
             const hpackageCollection = await hpackage();
