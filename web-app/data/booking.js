@@ -1,5 +1,6 @@
 const mongoCollections = require('./collections');
 const booking = mongoCollections.booking;
+const {ObjectId} = require("mongodb");
 
 module.exports = {
     async getbookingById(id)
@@ -11,7 +12,7 @@ module.exports = {
         else
         {
             const bookingCollection = await booking();
-            const booking1 = await bookingCollection.findOne({_id: id});
+            const booking1 = await bookingCollection.findOne({_id: ObjectId(id)});
             if(booking1 == null)
             {
                 return "No booking with the given ID";
