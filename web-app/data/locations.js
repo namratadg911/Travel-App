@@ -64,7 +64,13 @@ module.exports = {
             }
         }
     },
-
+    async getLocationIdByLocationName(name)
+    {
+        const locationCollection = await locations();
+        const location = await locationCollection.findOne({name:name});
+        const locationId = location['_id'];
+        return locationId
+    },
 
     async removeLocation(id)
     {

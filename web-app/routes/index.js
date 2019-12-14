@@ -138,10 +138,23 @@ const constructorMethod = app => {
         /*Hitesh*/
         app.use("/location-packages", listing_routes);
         /*Hitesh*/
-        app.get("/search", async (req, res) => {
-            res.status(200).render("package/listing", {
-                pageTitle: "Search Page",
-            });
+        app.post("/search", async (req, res) => {
+            const locationName = req.body.keyword;   
+            const data = require("../data/locations");
+            const hpackageid = await data.getLocationIdByLocationName(locationName)
+            const data1 = require("../data/hpackages");
+            const packageDetailsByLocationId = await data1.gethpackageByLocationId(hpackageid);
+            if (packageDetailsByLocationId === undefined || packageDetailsByLocationId.length == 0) {
+                res.status(404).render("error_view/generic_error", {
+                    pageTitle: "Package Not Found",
+                    error_msg: "Location not found"
+                });
+            } else {
+                res.status(200).render("package/listing", {
+                    pageTitle: "Package Listing",
+                    packages: packageDetailsByLocationId
+                });
+            }
         });
         /* user profile changes*/
         app.use("/user-profile", require("./user-profile"));
