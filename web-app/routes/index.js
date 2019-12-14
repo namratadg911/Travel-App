@@ -137,11 +137,9 @@ const constructorMethod = app => {
                 pageTitle: "Search Page",
             });
         });
-        app.get("/user-profile", async (req, res) => {
-            res.status(200).render("user/profile", {
-                pageTitle: "User Profile",
-            });
-        });
+        /* user profile changes*/
+        app.use("/user-profile", require("./user-profile"));
+
         /*Checkout routes to checkout.js*/
         app.use("/checkout", require("./checkout"));
 

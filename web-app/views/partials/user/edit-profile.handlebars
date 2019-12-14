@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <h1>My Profile</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="container">
+                <form id="edit-profile-form" method="POST" action="/#">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" value="ajames" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" value="Alex">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" value="James">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                                value="ajames@gmail.com">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="phoneNo">Phone Number</label>
+                            <input type="tel" class="form-control" id="phonenumber" value="5432109876">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <br>
+                            <br>
+                            <button id="edit-profile-button" type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <br>
+                            <br>
+                            <div class="text-info" style="display:none;" id="ajax-status-text"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#edit-profile-button").click(function () {
+            alert("clicked book!!- Validate here");
+            $("#edit-profile-form").submit();
+        });
+
+        $("#edit-profile-form").submit(function (e) {
+            e.preventDefault();
+            $("#ajax-status-text").text("make ajax call here");
+            $("#ajax-status-text").show();
+            setTimeout(function () {
+                $("#ajax-status-text").fadeOut().empty();
+                $("#ajax-status-text").hide();
+            }, 10000);
+            return false;
+        });
+    });
+</script>
