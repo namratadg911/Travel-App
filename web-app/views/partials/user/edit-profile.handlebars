@@ -8,8 +8,8 @@
                 <form id="edit-profile-form" method="POST" action="/#">
                     <div class="row">
                         <div class="col-sm-4">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" value="ajames" readonly>
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" value="ajames@gmail.com" readonly>
                         </div>
                         <div class="col-sm-4">
                             <label for="inputPassword">Password</label>
@@ -18,19 +18,8 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
-                            <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" id="firstname" value="Alex">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="lastname">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" value="James">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email"
-                                value="ajames@gmail.com">
+                            <label for="firstname">Full Name</label>
+                            <input type="text" class="form-control" id="name" value="Alex James">
                         </div>
                         <div class="col-sm-4">
                             <label for="phoneNo">Phone Number</label>
@@ -63,6 +52,21 @@
 
         $("#edit-profile-form").submit(function (e) {
             e.preventDefault();
+            $.post(
+                {
+                    url: "edit-profile/",
+                    data: {
+                        userId: userId
+                    },
+                    success: function (result) {
+                        const res = result;
+                        $("#status_" + bookingId).text(res.bookingObj.status);
+                        $("#" + event.target.id).hide();
+                    },
+                    error: function (xhr, status, errorString) {
+                        console.log("error!!");
+                    }
+                });
             $("#ajax-status-text").text("make ajax call here");
             $("#ajax-status-text").show();
             setTimeout(function () {

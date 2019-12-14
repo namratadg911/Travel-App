@@ -1,27 +1,17 @@
-<h1>{{pageTitle}}</h1>
-<main>
-    <form id="login-form" method="POST" action="/login">
-        <label for="username">Username:</label>
-        <input name="username" id="username" type="text" />
-        <br>
-        <br>
-        <label for="password">Password:</label>
-        <input name="password" id="password" type="password" />
-        <br>
-        <br>
-        <button type="submit">Log In</button>
-        <button type ="submit" href="profile.handlebars">Sign Up</a></button>
-        <br>
-        <p class="error">{{error}}</p>
+<div class="login-form">
+    <form action="/login" method="post">
+        <h2 class="text-center">Log in</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" class="form-control" required="required">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form-control" required="required">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>
     </form>
-
-    {{!-- <script>
-        $("#login-form").submit(function(event)){
-            event.preventDefault();
-        }
-
-        var $form = $(this),
-        url = $form.attr('action');
-    </script> --}}
-
-</main>
+    <p class="text-center"><a href="/sign-up">Sign Up</a></p>
+</div>

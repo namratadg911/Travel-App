@@ -124,6 +124,12 @@ const constructorMethod = app => {
             });
         });
         */
+        app.get("/login-form", async (req, res) => {
+            res.render("user/login");
+        });
+        app.get("/signup-form", async (req, res) => {
+            res.render("user/signup");
+        });
         app.get("/home", async (req, res) => {
             res.status(200).render("home/index", {
                 pageTitle: "Home | Plan My Trip",
@@ -162,7 +168,7 @@ const constructorMethod = app => {
                         const bookingId = {
                             id: booking_id
                         };
-                        await data1.updateBookingStatus(booking_id,"booked");
+                        await data1.updateBookingStatus(booking_id, "booked");
                         res.status(200).render("booking/confirmation", {
                             pageTitle: "Booking Confirmation",
                             bookingId: bookingId
