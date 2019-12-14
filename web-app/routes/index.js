@@ -144,7 +144,7 @@ const constructorMethod = app => {
             const hpackageid = await data.getLocationIdByLocationName(locationName)
             const data1 = require("../data/hpackages");
             const packageDetailsByLocationId = await data1.gethpackageByLocationId(hpackageid);
-            if (packageDetailsByLocationId === undefined || packageDetailsByLocationId.length == 0) {
+            if (hpackageid === undefined || hpackageid == null) {
                 res.status(404).render("error_view/generic_error", {
                     pageTitle: "Package Not Found",
                     error_msg: "Location not found"
@@ -190,13 +190,10 @@ const constructorMethod = app => {
                 }
             }
             if (c == 0) {
-                console.log("fail");
-                const error = {
-                    message: "payment failed"
-                };
-                res.status(400).render("error_view/generic_error", {
+                console.log("Payment fail");
+                res.status(404).render("error_view/generic_error", {
                     pageTitle: "Booking Confirmation",
-                    error: error
+                    error_msg: "Payment Failed"
                 });
             }
 
