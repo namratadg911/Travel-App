@@ -1,4 +1,5 @@
 <div class="container-fluid">
+    {{#attractions}}
     <div class="row row-buffer">
         <div class="col-sm-3">
             <img width="220" height="220"
@@ -8,10 +9,11 @@
             <br>
         </div>
         <div class="col-sm-9">
-            <h2>Munnar-dynamic</h2>
+            <h2>{{name}}</h2>
             <br>
             <label>Duration:</label>
-            <label>2 hours-replace it with dynamic</label>
+            <label>{{duration}} hours</label>
         </div>
     </div>
+    {{/attractions}}
 </div>
