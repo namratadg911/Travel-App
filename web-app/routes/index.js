@@ -24,13 +24,28 @@ const constructorMethod = app => {
     // app.get("/", async (req, res) => {
 
     //     if (req.session.user != undefined) {
-    //         res.redirect("/private");    
+    //         res.redirect("/search");    
     //     } else {
             
     //         res.render("user/login")
             
     //     }
-    // })
+    // });
+    // app.post("/login", async (req, res) => {
+    //     const username = req.body.username;
+    //     const password = req.body.password;
+
+    //     try {
+    //         await validateUser(username, password);
+    //         req.session.username = username;
+    //         res.redirect("/search");
+    //     } catch (e) {
+    //         res.status(401).render("login", {
+    //             pageTitle: "Login",
+    //             error: e
+    //         });
+    //     }
+    // });
         /*
             if (req.session !== undefined && req.session.username) {
                 res.redirect("/private");
@@ -40,7 +55,7 @@ const constructorMethod = app => {
                 });
             }
             */
-    });
+   // });
 
 
 
@@ -63,21 +78,7 @@ const constructorMethod = app => {
             throw "Password do not match in the database!";
         }
     }
-    app.post("/login", async (req, res) => {
-        const username = req.body.username;
-        const password = req.body.password;
-
-        try {
-            await validateUser(username, password);
-            req.session.username = username;
-            res.redirect("/private");
-        } catch (e) {
-            res.status(401).render("login", {
-                pageTitle: "Login",
-                error: e
-            });
-        }
-    });
+    a
     //Authentication Middleware for /private
     app.use("/private", function (req, res, next) {
         const username = req.session.username;
@@ -204,6 +205,6 @@ const constructorMethod = app => {
             errorMsg: "Page Not Found!!"
         });
     });
-};
+})};
 
 module.exports = constructorMethod;
