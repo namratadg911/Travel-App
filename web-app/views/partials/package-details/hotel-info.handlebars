@@ -1,28 +1,29 @@
 <div class=" container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <h3>Hotel: Hotel Name</h3>
+            <h3>Hotel: {{hotel.name}}</h3>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img width="220" height="220"
-                src="https://www3.hilton.com/resources/media/hi/BUHHITW/en_US/img/shared/full_page_image_gallery/main/HL_exteriro001_1270x560_FitToBoxSmallDimension_Center.jpg"
-                alt="hotel name" />
+            <img width="220" height="220" src="{{hotel.image}}" alt="{{hotel.name}}" />
             <br>
             <br>
         </div>
         <div class="col-sm-9">
             <label for="hotel_1">Room Type</label>
+            {{#hotel.rooms}}
             <div class="radio">
                 <!-- checked attribute needs to be populated at the backend-->
                 <!-- Onclick, the final selection form needs to be updated with the updated price.-->
                 <!--Name -->
-                <label><input type="radio" value="0" id="hotel_1" name="hotel_1" checked>Queen</label>
-                <label><input type="radio" value="200" name="hotel_1">King</label>
+
+                <label><input type="radio" value="{{price_diff}}" id="hotel_{{../_id}}_{{@index}}"
+                        name="hotel_{{../_id}}" {{checked}}>{{type}}</label>
             </div>
             <!--If additional price is greater than zero then display-->
-            <h4>Price:+$100</h4>
+            <label for="hotel_{{../_id}}_{{@index}}">{{price_diff_text}}</label>
+            {{/hotel.rooms}}
         </div>
     </div>
 </div>

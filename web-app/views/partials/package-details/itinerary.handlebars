@@ -5,13 +5,15 @@
             <h3>Itinerary</h3>
         </div>
     </div>
+    {{#package.itinerary}}
     <div class="row row-buffer">
         <div class="col-sm-12">
             <h2 class="text-center" style="background-color:darkorange;border-radius: 50px;">
-                Day 1
+                {{name}}
             </h2>
             {{> package-details/hotel-info}}
             {{> package-details/attraction}}
         </div>
     </div>
+    {{/package.itinerary}}
 </div>
