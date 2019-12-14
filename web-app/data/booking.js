@@ -20,6 +20,17 @@ module.exports = {
             }
         }
     },
+    async getAllBookedByUserId(userId) {
+        const bookingCollection = await booking();
+        //change status in the query from pending to booked after testing for sit
+        const bookingHistory = await bookingCollection.find({
+            user_id: userId,
+            status: "pending"
+        }).sort({
+            booking_date: -1
+        }).toArray();
+        return bookingHistory;
+    },
 
     async getAll() {
         const bookingCollection = await booking();
@@ -30,6 +41,7 @@ module.exports = {
         let newbooking = {
             user_id: bookingDetails.user_id,
             package_id: bookingDetails.package_id,
+            package_name: bookingDetails.package_name,
             payment_id: "",
             total_price: bookingDetails.total_price,
             currency: bookingDetails.currency,

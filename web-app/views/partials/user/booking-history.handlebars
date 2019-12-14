@@ -12,15 +12,19 @@
                         <th scope="col">Package</th>
                         <th scope="col">Date</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {{#profile.bookingHistory}}
                     <tr>
-                        <td>Package Name</td>
-                        <td>12/15/2019</td>
+                        <td>{{package_name}}</td>
+                        <td>{{booking_date}}</td>
+                        <td class="text-uppercase">{{status}}</td>
                         <td><button id="cancle-booking-button" type="button" class="btn btn-primary">Cancle Now</button>
                         </td>
                     </tr>
+                    {{/profile.bookingHistory}}
                 </tbody>
             </table>
 
