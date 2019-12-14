@@ -25,7 +25,37 @@ module.exports = {
 
     async getAll()
     {
+        const bookingCollection = await booking();
+        const booking1 = await bookingCollection.find({}).toArray();
+        return booking1;
+    },
 
+    async create (user_id, package_id, payment_id, total_price, total_people, booking_date)
+    {
+        let newbooking = {
+            user_id:user_id,
+            package_id: package_id,
+            payment_id: payment_id,
+            total_price: total_price,
+            currency: "USD",
+            total_people: total_people,
+            booking_date: booking_date,
+            booking:""
+        };
+        const bookingCollection = await booking();
+        const insertInfo = await bookingCollection.insertOne(newbooking);
+            if(insertInfo.insertedCount == 0)
+            {
+                throw "Couldn't add booking";  
+            }
+            else
+            {
+                const newID = insertInfo.insertedId;
+                const booking1 = await this.gethpackageById(newID);
+                return booking1;
+            }
     }
+
+
 
 };
