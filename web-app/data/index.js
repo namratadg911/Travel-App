@@ -12,29 +12,29 @@ const bcrypt = require("bcryptjs");
 
 async function create()
 {
-   const one = await hpackage1.create(1,"Mini Package", "Exciting 3 day packages to explore God's own country Kerala! Visit the National Museum and get to know the history of this state. Beautifil Backwaters and waterfall helps you to get closer to nature and refresh your mind. Experience the best Safari in Thekkaddy and National Park, meet new furry frinds in their own space. And learn about the knowledge that our caves impart.", 1500, 1, [1,2,3], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2CIZ2BWJj6gAwCzVcHSqv84dDsinVsIZ07_CnYRY-_XFp0q-fQ&s");
+   const one = await hpackage1.create(1,"Mini Package", "Exciting 3 day packages to explore God's own country Kerala! This mix of history and the most beautiful water bodies on earth will mesmerize you.", 1500, 1, [1,2,3], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2CIZ2BWJj6gAwCzVcHSqv84dDsinVsIZ07_CnYRY-_XFp0q-fQ&s");
    console.log(one);
-   const oneone = await hpackage1.create(2,"Mega Package","Exciting 5 day packages to explore God's own country Kerala! Visit the National Museum and get to know the history of this state. Beautifil Backwaters and waterfall helps you to get closer to nature and refresh your mind. Experience the best Safari in Thekkaddy and National Park, meet new furry frinds in their own space. And learn about the knowledge that our caves impart.Beaches, Vemband Lake and Periyar River, all in their own sense are a sight to behold and each of them have a story to convey! And if you like stories of Kings & Queens we have the perfect Fort for you!", 2000,  1,[1,2,3,4,5], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KF5qdNqs1drhB9UARW8cOrIFo-5MPiWoI0NjqE6eKZrrtfo_2Q&s");
+   const oneone = await hpackage1.create(2,"Mega Package","Explore Backwaters, waterfall, enjoy beaches and be a King or Queen on our 5 days package to Kerala!", 2000,  1,[1,2,3,4,5], "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KF5qdNqs1drhB9UARW8cOrIFo-5MPiWoI0NjqE6eKZrrtfo_2Q&s");
    console.log(oneone);
-   const two = await hpackage1.create(3,"Mini Package", "3-Day tour", 1400,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
+   const two = await hpackage1.create(3,"Mini Package", "One of the most pristine places on Earth, enjoy our 3 day packages in the lap of the Himalayas and get closer to nature!", 1400,  2, [6,7,8],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7EhOHIfR2Om8YwHWRCaTgkoPX5KxQg2X60B-GwHIItKzyRTe&s");
    console.log(two);
-   const twotwo = await hpackage1.create(4,"Mega Package", "5-Day tour",  1900,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFawcukP8mv8TT41QkRTJULq4k31XXZJOWl47vrnHniz0uN71scg&s");
+   const twotwo = await hpackage1.create(4,"Mega Package", "Want to trek to the places most mentioned in the Indian Mythology and get a better insight to the stories? Book our 5 day package to Himalayas and get exploring!",  1900,  2, [6,7,8,9,10],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFawcukP8mv8TT41QkRTJULq4k31XXZJOWl47vrnHniz0uN71scg&s");
    console.log(twotwo);
-   const three = await hpackage1.create(5,"Mini Package", "3-Day tour", 16000,  3, [11,12,13],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtLSKszSougDZJcuyVEnzpgwEhWu2iU7JUqiTpVJCtC1-Rib_Bg&s");
+   const three = await hpackage1.create(5,"Mini Package", "The state that is home to a number of historic buildings, multi-religious pilgrimage sites, hill stations and World Heritage sites, come and explore these places in our very own Tamil Nadu for 3 days!", 16000,  3, [11,12,13],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtLSKszSougDZJcuyVEnzpgwEhWu2iU7JUqiTpVJCtC1-Rib_Bg&s");
    console.log(three);
-   const threethree = await hpackage1.create(6,"Mega Package", "5-Day tour", 2100,  3, [11,12,13,14,15],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const threethree = await hpackage1.create(6,"Mega Package", "Explore the culture, cuisine and architecture shaped by the most powerful empires, book our 5 day package to Tamil nadu to immerse in history and beauty.", 2100,  3, [11,12,13,14,15],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
    console.log(threethree);
-   const four = await hpackage1.create(7,"Mini Package", "3-Day tour", 1700,  4, [16,17,18],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qcQjmUloCvrZA8gy4Py_4mg89Ka01a-qcd_K7xIiI7WSY6HHSA&s");
+   const four = await hpackage1.create(7,"Mini Package", "Visit the most-visited state in 3 days and get to know what Andhra Pradesh is all about!", 1700,  4, [16,17,18],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qcQjmUloCvrZA8gy4Py_4mg89Ka01a-qcd_K7xIiI7WSY6HHSA&s");
    console.log(four);
-   const fourfour = await hpackage1.create(8,"Mega Package", "5-Day tour", 2200,  4, [16,17,18,19,20],"https://cdn.britannica.com/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg");
+   const fourfour = await hpackage1.create(8,"Mega Package", "Explore the temples and valleys in Andhra Pradesh in a 5 day tour and be a part of the culture.", 2200,  4, [16,17,18,19,20],"https://cdn.britannica.com/25/178125-050-4AA6ED25/Mount-Assiniboine-Canada-Alberta.jpg");
    console.log(fourfour);
-   const five = await hpackage1.create(9,"Mini Package", "3-Day tour", 1300,  5, [21,22,23],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
+   const five = await hpackage1.create(9,"Mini Package", "Be a punjabi for 3 days and get to know what they are made of in Punjab!", 1300,  5, [21,22,23],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvvZubPKSvYNyy6pQYOQbKoMMoJzTzGasw7DyK8OaLm3DP0Q&s");
    console.log(five);
-   const fivefive = await hpackage1.create(10,"Mega Package", "5-Day tour", 1800, 5, [21,22,23,24,25],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjLM8Z0PA9tIsYY-FxA539_2UBe89MwyDcRLQutl_mQdBu_sO&s");
+   const fivefive = await hpackage1.create(10,"Mega Package", "The 5 day tour will give you the visual experience of what role Punjab has in the making of today's India", 1800, 5, [21,22,23,24,25],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyjLM8Z0PA9tIsYY-FxA539_2UBe89MwyDcRLQutl_mQdBu_sO&s");
    console.log(fivefive);
-   const six = await hpackage1.create(11,"Mini Package", "3-Day tour", 2000, 6, [26,27,28],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NaHVTHYEtCNdJNeLQf0_wU6F8HFqqQArzXh7ZEYAsbYgjdrP5g&s");
+   const six = await hpackage1.create(11,"Mini Package", "A state that defines beauty and literature, come and visit West Bengal for a 3 day tour and find peace", 2000, 6, [26,27,28],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NaHVTHYEtCNdJNeLQf0_wU6F8HFqqQArzXh7ZEYAsbYgjdrP5g&s");
    console.log(six);
-   const sixsix = await hpackage1.create(12,"Mega Package", "5-Day tour", 2500, 6, [26,27,28,29,30],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSdUZ8MF5EzNFFJJb7nB1UqWzXVDAiiCPN28QDnb76Rr2lLVfqw&s");
+   const sixsix = await hpackage1.create(12,"Mega Package", "5 day tour to West Bengal, enjoy with the Tigers! ", 2500, 6, [26,27,28,29,30],"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSdUZ8MF5EzNFFJJb7nB1UqWzXVDAiiCPN28QDnb76Rr2lLVfqw&s");
    console.log(sixsix);
 
 
