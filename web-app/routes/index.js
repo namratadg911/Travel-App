@@ -213,6 +213,7 @@ const constructorMethod = app => {
             const package = {
                 id: packageDetails['_id'],
                 name: packageDetails['name'],
+                image: packageDetails['image'],
                 description: packageDetails['description'],
                 price: packageDetails['price'],
                 itinerary: itrInfoList,

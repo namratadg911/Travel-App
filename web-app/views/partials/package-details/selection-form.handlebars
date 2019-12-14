@@ -1,5 +1,8 @@
 <form id="package-selected-form" name="package-selected-form" method="POST" action="/checkout">
     <input type="hidden" name="package_id" value="{{package.id}}" />
+    <input type="hidden" name="package_name" value="{{package.name}}" />
+    <input type="hidden" name="package_image" value="{{package.image}}" />
+    <input type="hidden" name="package_description" value="{{package.description}}" />
     <input type="hidden" name="num_of_people" value="1" />
     <input type="hidden" name="date_of_trip" value="" />
     <input type="hidden" name="unit_price" value="{{package.price}}" />

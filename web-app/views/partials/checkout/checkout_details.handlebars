@@ -5,28 +5,33 @@
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img width="220px" height="220px" alt="package name here"
-                src="https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/Varkala_beach_750.jpg?itok=Nk4qC4Uf" />
+            <img width="220px" height="220px" alt="{{bookingDetails.package_name}}"
+                src="{{bookingDetails.package_image}}" />
         </div>
         <div class="col-sm-9">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Pacakge Name</h1>
+                    <h1>{{bookingDetails.package_name}}</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <p>Pacakge Description</p>
+                    <p>{{bookingDetails.package_description}}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <p>Total Price:$1500</p>
+                    <p>Total Price:${{bookingDetails.total_price}}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <p>Total Number of People:4</p>
+                    <p>Total Number of People:{{bookingDetails.num_of_people}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>Trip Date:{{bookingDetails.date_of_trip}}</p>
                 </div>
             </div>
         </div>
