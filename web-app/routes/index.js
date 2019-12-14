@@ -146,19 +146,20 @@ const constructorMethod = app => {
 
         app.post("/confirmation", async (req, res) => {
             const data = require("../data/payment");
+            const data1 = require("../data/booking");
             const paymentData = await data.getall();
             var c = 0;
+            var booking_id = req.body.booking_id;
             for (var i = 0; i < paymentData.length; i++) {
                 if (req.body.name == paymentData[i]['name'] && req.body.expirymonth == paymentData[i]['month'] && req.body.expiryyear == paymentData[i]['year']) {
                     var cardnumber_check = false;
                     var cvv_check = false;
                     cardnumber_check = await bcrypt.compare(req.body.cardnumber, paymentData[i]['cardnumber']);
-                    console.log(cardnumber_check);
                     cvv_check = await bcrypt.compare(req.body.cvv, paymentData[i]['cvv']);
-                    console.log(cvv_check);
                     if (cardnumber_check && cvv_check) {
                         console.log("success!");
                         c++;
+                        await data1.updateBookingStatus(booking_id,"booked");
                         res.status(200).render("booking/confirmation", {
                             pageTitle: "Booking Confirmation",
                         });
