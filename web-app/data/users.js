@@ -1,49 +1,50 @@
-
 const mongoCollections = require("./collections");
 const user = mongoCollections.user;
 const bcrypt = require("bcryptjs")
-const saltRounds = 16;
-const ObjectId = require('mongodb').ObjectID;   //https://stackoverflow.com/questions/7825700/convert-string-to-objectid-in-mongodb
+const saltRounds = 8;
+const ObjectId = require('mongodb').ObjectID; //https://stackoverflow.com/questions/7825700/convert-string-to-objectid-in-mongodb
 
 module.exports = {
-
-    async get(id){
-        if(!id) throw "Please provide id";
-        
+    async isExistUserByEmail(email) {
+        if (email === undefined) {
+            throw "Please enter the email address!!";
+        }
         const userCollection = await user();
-        
-        const user2 = await userCollection.findOne({ _id: ObjectId(id) });
+        const userObj = await userCollection.findOne({
+            email: email
+        });
+        if (userObj === null) return false;
+
+        return true;
+
+    },
+    async get(id) {
+        if (!id) throw "Please provide id";
+
+        const userCollection = await user();
+
+        const user2 = await userCollection.findOne({
+            _id: ObjectId(id)
+        });
         if (user2 === null) throw "No person with that id";
 
         return user2;
-  },
+    },
 
-    async create(email, username, password, firstname, lastname, address, city, state, phonenumber){
-        
-        if(!email) throw "Email of the user should be provided";
-        if(!username) throw "username should be provided";
-        if(!firstname) throw "firstname should be provided";
-        if(!lastname) throw "lastname should be provided";
-        if(!address) throw "address should be provided";
-        if(!city) throw "city should be provided";
-        if(!state) throw "state should be provided";
-        if(!phonenumber) throw "phonenumber should be provided";
-        if(!password) throw "password should be provided";
-        
+    async create(name, email, password, phonenumber) {
+
+        if (!email) throw "Email of the user should be provided";
+        if (!name) throw "firstname should be provided";
+        if (!phonenumber) throw "phonenumber should be provided";
+        if (!password) throw "password should be provided";
+
         const userCollection = await user();
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         let newUser = {
-            _id: id,
             email: email,
-            firstname: firstname,
-            lastname: lastname,
-            username: username,
+            name: name,
             hashedPassword: hashedPassword,
-            address: address,
-            city: city,
-            state: state,
-            zip: zip,
             phonenumber: phonenumber
 
         }
@@ -54,22 +55,22 @@ module.exports = {
 
         const user1 = await this.get(newId);
         return user1;
-  },
+    },
 
     async updateUser(id, updatedUser) {
-    
+
         const userCollection = await user();
-    
+
         const updatedUserData = {};
-    
+
         if (updatedUser.email) {
             updatedUserData.email = updatedUser.email;
         }
-    
+
         if (updatedUser.firstname) {
             updatedUserData.firstname = updatedUser.firstname;
         }
-    
+
         if (updatedUser.lastname) {
             updatedUserData.lastname = updatedUser.lastname;
         }
@@ -97,13 +98,14 @@ module.exports = {
         if (updatedUser.zip) {
             updatedUserData.state = updatedUser.zip;
         }
-        
-        await userCollection.updateOne({_id: id}, {$set: updatedUserData});
-    
+
+        await userCollection.updateOne({
+            _id: id
+        }, {
+            $set: updatedUserData
+        });
+
         return await this.get(id);
-        },
+    },
 
 };
-
-
-    

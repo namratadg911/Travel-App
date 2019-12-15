@@ -21,8 +21,8 @@ router.get("/", async (req, res) => {
         state: req.body.state,
         city: req.body.city,
         zip: req.body.zip,
-        username:req.body.username,
-        password:req.body.password
+        username: req.body.username,
+        password: req.body.password
     }
     const profile = {
         user: userDetail,
@@ -52,6 +52,20 @@ router.post("/cancel-booking/:id", async (req, res) => {
     }
 
 
+});
+
+router.post("/validate-user", async (req, res) => {
+    let emailId = req.body.email;
+    const userData = require("../data/users");
+    let isExistingUser = await userData.isExistUserByEmail(emailId);
+    const responseObj = {};
+    if (isExistingUser) {
+        responseObj.isError = true;
+        responseObj.message = "User Already Exists!!";
+    } else {
+        responseObj.isError = false;
+    }
+    res.json(responseObj);
 });
 
 

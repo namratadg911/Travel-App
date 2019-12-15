@@ -1,58 +1,72 @@
 <div class="login-form">
-  <form id="edit-profile-form" action="/signup" method="post">
+  <form id="signup-form" action="/signup" method="POST">
     <h2 class="text-center">Sign Up</h2>
     <div class="form-group">
       <label for="name">Full Name</label>
-      <input type="text" class="form-control" id="name" value="Alex">
+      <input type="text" class="form-control" name="name" id="name" value="">
     </div>
     <div class="form-group">
       <label for="email">Username/Email</label>
-      <input type="text" class="form-control" id="email" value="ajames@gmail.com">
+      <input type="text" class="form-control" name="email" id="email" value="">
     </div>
     <div class="form-group">
       <label for="inputPassword">Password</label>
-      <input type="password" class="form-control" id="inputPassword">
+      <input type="password" class="form-control" name="inputPassword" id="inputPassword">
     </div>
     <div class="form-group">
       <label for="phoneNo">Phone Number</label>
-      <input type="tel" class="form-control" id="phonenumber" value="">
+      <input type="tel" class="form-control" name="phonenumber" id="phonenumber" value="">
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      <button id="signup-button" type="button" class="btn btn-primary btn-block">Create Account</button>
     </div>
   </form>
+  <p class="text-danger" id="err_msg"></p>
 </div>
 <script>
   $(document).ready(function () {
-    $("#edit-profile-button").click(function () {
-      alert("clicked book!!- Validate here");
-      $("#edit-profile-form").submit();
-    });
+    function resetError() {
+      $("#err_msg").text("");
+    }
 
-    $("#edit-profile-form").submit(function (e) {
-      e.preventDefault();
+    function submitForm() {
+      let email = $("#email").val();
+      let name = $("#name").val();
+      let password = $("#inputPassword").val();
+      let phone = $("#phonenumber").val();
+
+      $.ajax({
+        type: "GET",
+        url: "/signup",
+        data: { "name": "test" },
+        success: function (result) { },
+        dataType: "json"
+      });
+    }
+    $("#signup-button").click(function () {
+      resetError();
+      let email = $("#email").val();
+      //validate email
       $.post(
         {
-          url: "edit-profile/",
+          url: "/user-profile/validate-user",
           data: {
-            userId: userId
+            email: email
           },
           success: function (result) {
             const res = result;
-            $("#status_" + bookingId).text(res.bookingObj.status);
-            $("#" + event.target.id).hide();
+            if (res.isError) {
+              $("#err_msg").text(res.message);
+            } else {
+              $("#signup-form").submit();
+              //submitForm();
+            }
+
           },
           error: function (xhr, status, errorString) {
             console.log("error!!");
           }
         });
-      $("#ajax-status-text").text("make ajax call here");
-      $("#ajax-status-text").show();
-      setTimeout(function () {
-        $("#ajax-status-text").fadeOut().empty();
-        $("#ajax-status-text").hide();
-      }, 10000);
-      return false;
     });
   });
 </script>
