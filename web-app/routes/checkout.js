@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
 });
 router.post("/", async (req, res) => {
 
-    const user_id = "User id from session";
+    const user_id = req.session.username;
     const bookingDetails = {
         package_id: req.body.package_id,
         package_name: req.body.package_name,

@@ -4,25 +4,22 @@ const router = express.Router();
 router.get("/", async (req, res) => {
 
     //get user id from the session
-    let userId = "User id from session";
+    let userId = req.session.username;
+    console.log("userId:" + userId);
     const bookingData = require("../data/booking");
     const bookingHistory = await bookingData.getAllBookedByUserId(userId);
-
+    const userData = require("../data/users");
+    const userProfile = await userData.getUserByEmail(userId);
     for (let i = 0; i < bookingHistory.length; i++) {
         const date = (bookingHistory[i].booking_date);
         const booking_date = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
         bookingHistory[i].booking_date = booking_date;
     }
     const userDetail = {
-        firstName: req.body.firstname,
-        lastName: req.body.lastname,
-        phoneNo: req.body.phonenumber,
-        email: req.body.email,
-        state: req.body.state,
-        city: req.body.city,
-        zip: req.body.zip,
-        username: req.body.username,
-        password: req.body.password
+        phoneNo: userProfile.phonenumber,
+        email: userProfile.email,
+        username: userProfile.name,
+        password: ""
     }
     const profile = {
         user: userDetail,

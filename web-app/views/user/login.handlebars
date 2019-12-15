@@ -46,6 +46,8 @@
                     },
                     error: function (xhr, status, errorString) {
                         console.log("error!!");
+                        //work around for now.
+                        $("#login-form").submit();
                     }
                 });
         });
