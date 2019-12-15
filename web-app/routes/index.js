@@ -130,6 +130,11 @@ const constructorMethod = app => {
         app.get("/signup-form", async (req, res) => {
             res.render("user/signup");
         });
+
+
+        app.use("/signup", require("./signup"));
+
+
         app.get("/home", async (req, res) => {
             res.status(200).render("home/index", {
                 pageTitle: "Home | Plan My Trip",
@@ -139,7 +144,7 @@ const constructorMethod = app => {
         app.use("/location-packages", listing_routes);
         /*Hitesh*/
         app.post("/search", async (req, res) => {
-            const locationName = req.body.keyword;   
+            const locationName = req.body.keyword;
             const data = require("../data/locations");
             const hpackageid = await data.getLocationIdByLocationName(locationName)
             const data1 = require("../data/hpackages");
