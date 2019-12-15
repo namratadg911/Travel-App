@@ -37,7 +37,10 @@ module.exports = {
         if (!name) throw "firstname should be provided";
         if (!phonenumber) throw "phonenumber should be provided";
         if (!password) throw "password should be provided";
-
+        if(password.length<5) throw "password should be minimum of 5 letters"
+        if(phonenumber.length<10) throw "Enter valid phone number"
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(String(email).toLowerCase())) throw "Enter a valid email"
         const userCollection = await user();
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
