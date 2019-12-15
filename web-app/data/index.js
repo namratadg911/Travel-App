@@ -5,6 +5,7 @@ const loc = require("./locations");
 const hotels = require("./hotels");
 const itineraryData = require("../tasks/itinerary-data");
 const itinerary = require("./itinerary");
+const users = require("./users");
 const connection = require('./connection');
 const bcrypt = require("bcryptjs");
 
@@ -294,6 +295,8 @@ Year: 2029
 CVV:  644
 */
 
+ const user1 = await users.create("Patrick Hill" , "patrick@gmail.com", "cs546", "0000000000");
+ console.log(user1);
 
 
    await itinerary.insertMany(itineraryData.getItineraries());
