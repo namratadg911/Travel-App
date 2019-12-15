@@ -22,32 +22,33 @@ const constructorMethod = app => {
                 featuredColumnSize
             )
         });
+        /*
+                app.get("/", async (req, res) => {
 
-        // app.get("/", async (req, res) => {
+                    if (req.session.username != undefined) {
+                        res.redirect("/");
+                    } else {
 
-        //     if (req.session.user != undefined) {
-        //         res.redirect("/search");    
-        //     } else {
+                        res.render("/login");
 
-        //         res.render("user/login")
-
-        //     }
-        // });
-        // app.post("/login", async (req, res) => {
-        //     const username = req.body.username;
-        //     const password = req.body.password;
-
-        //     try {
-        //         await validateUser(username, password);
-        //         req.session.username = username;
-        //         res.redirect("/search");
-        //     } catch (e) {
-        //         res.status(401).render("login", {
-        //             pageTitle: "Login",
-        //             error: e
-        //         });
-        //     }
-        // });
+                    }
+                });
+                */
+        app.post("/login", async (req, res) => {
+            const username = req.body.email;
+            const password = req.body.inputPassword;
+            console.log(username + ":" + password);
+            try {
+                await validateUser(username, password);
+                req.session.username = username;
+                res.redirect("/");
+            } catch (e) {
+                res.status(401).render("user/login", {
+                    pageTitle: "Login",
+                    error: e
+                });
+            }
+        });
         /*
             if (req.session !== undefined && req.session.username) {
                 res.redirect("/private");
@@ -61,7 +62,7 @@ const constructorMethod = app => {
 
 
 
-        /*
+
         async function validateUser(username, password) {
             if (username === undefined || username.trim().length == 0) {
                 throw "Username is mandatory. Please enter Username.";
@@ -69,19 +70,21 @@ const constructorMethod = app => {
             if (password === undefined || password.trim().length == 0) {
                 throw "Password is mandatory. Please enter password.";
             }
-            const user = users.filter(function (ele) {
-                return ele.username == username;
-            });
-            if (user.length == 0) {
+            const userData = require("../data/users");
+            const user = await userData.getUserByEmail(username);
+
+            if (user === undefined) {
                 throw "No user found with Username:" + username;
             }
-            const compareMatch = await bcryptjs.compare(password, user[0].hashedPassword);
+            console.log(user);
+            const compareMatch = await bcrypt.compare(password, user.hashedPassword);
             if (!compareMatch) {
-                throw "Password do not match in the database!";
+                throw "Please check username/password.";
             }
         }
-        a
+
         //Authentication Middleware for /private
+        /*
         app.use("/private", function (req, res, next) {
             const username = req.session.username;
             try {
@@ -111,7 +114,7 @@ const constructorMethod = app => {
                 person: req.session.user
             });
         });
-
+*/
         app.get("/logout", async (req, res) => {
             //clear cookie
             const expireTime = new Date();
@@ -123,7 +126,7 @@ const constructorMethod = app => {
                 pageTitle: "Logout"
             });
         });
-        */
+
         app.get("/login-form", async (req, res) => {
             res.render("user/login");
         });
